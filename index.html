@@ -2248,6 +2248,37 @@
             // renderGlobalTouristStats(); // Will be called when tab is activated
             // renderTouristAnalysisCards(touristAnalysisData); // Will be called when tab is activated
         });
+        document.addEventListener('DOMContentLoaded', () => {
+    // Other code ...
+
+    // Modal elements for "Countries" section
+    const countryDetailModal = document.getElementById('country-detail-modal');
+    const closeCountryModalBtn = document.getElementById('close-country-modal');
+    const countryModalContent = document.getElementById('country-modal-content');
+    const countryModalTitle = document.getElementById('country-modal-title');
+    const countryModalBody = document.getElementById('country-modal-body');
+
+    // Function to close the country detail modal
+    function closeCountryDetailModal() {
+        countryDetailModal.classList.add('opacity-0');
+        countryModalContent.classList.add('scale-95');
+        setTimeout(() => {
+            countryDetailModal.classList.add('hidden');
+        }, 300);
+    }
+
+    // Event listeners to close the country modal
+    closeCountryModalBtn.addEventListener('click', closeCountryDetailModal);
+    countryDetailModal.addEventListener('click', (e) => {
+        if (e.target === countryDetailModal) {
+            closeCountryDetailModal();
+        }
+    });
+
+    // Other code ...
+});
+
     </script>
+    
 </body>
 </html>
