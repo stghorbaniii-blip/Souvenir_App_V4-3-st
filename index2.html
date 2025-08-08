@@ -514,9 +514,9 @@
                 economicValue: 7,
                 // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Matryoshka+1",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Matryoshka+2",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Matryoshka+3"
+                    "Souvenir's%20Images/matryoshka-1.jpg",
+                    "Souvenir's%20Images/matryoshka-2.jpg",
+                    "Souvenir's%20Images/matryoshka-3.jpg"
                 ],
                 annualProductionUnits: 1200000,
                 annualSalesRevenueUSD: "یافت نشده",
@@ -528,235 +528,612 @@
                 name: "فرش ایرانی",
                 englishName: "Persian Carpet",
                 country: "ایران",
-                minPriceUSD: 200,
-                maxPriceUSD: 50000,
-                origin: "تبریز",
-                story: "فرش ایرانی، شاهکاری از هنر و صنعت، با قدمتی چند هزار ساله، هر گره آن داستانی از فرهنگ، تاریخ و اعتقادات مردم ایران را بازگو می‌کند. طرح‌ها و رنگ‌های آن الهام گرفته از طبیعت، شعر و اساطیر است.",
-                description: "دستبافته‌ای نفیس از پشم یا ابریشم با طرح‌های پیچیده و رنگ‌های طبیعی. نمادی از هنر و فرهنگ غنی ایران.",
-                avgPriceUSD: 1500,
-                localPrice: "75,000,000 IRR",
-                category: ["دکوری", "صنایع دستی", "هنری"],
-                audience: ["کلکسیونرها", "علاقه‌مندان به فرهنگ", "گردشگران لوکس"],
-                materials: "پشم، ابریشم، رنگ‌های طبیعی",
-                usage: "تزئین منزل، سرمایه‌گذاری، هدیه لوکس",
+                secondCountry: "ایالات متحده و چین", // New field
+                minPriceUSD: 1180, // New field
+                maxPriceUSD: 70000, // New field
+                origin: "کاشان، اصفهان، تبریز",
+                story: "هنر قالی‌بافی در ایران قدمتی بیش از ۲۵۰۰ سال دارد و با فرهنگ و هنر این سرزمین گره خورده است. هر طرح و نقش، بازتابی از طبیعت، شعر و اساطیر ایرانی است.",
+                description: "فرش‌های دستباف ایرانی به دلیل کیفیت، طرح‌های پیچیده و رنگ‌های طبیعی شهرت جهانی دارند. این فرش‌ها نه تنها یک کف‌پوش، بلکه یک سرمایه‌گذاری هنری محسوب می‌شوند.",
+                avgPriceUSD: 450,
+                localPrice: "25,000,000 IRR",
+                category: ["صنایع دستی", "دکوری", "لوکس", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "قشر پولدار", "بزرگسالان", "سرمایه‌گذاران"],
+                materials: "پشم، ابریشم, رنگ‌های گیاهی",
+                usage: "تزئین منزل، سرمایه‌گذاری",
                 culturalValue: 10,
                 economicValue: 9,
+                specialNotes: {
+                    production: "تولید فرش دستباف نیازمند مهارت بالا و زمان طولانی است. چالش‌ها شامل تأمین مواد اولیه با کیفیت و حفظ دانش سنتی در برابر تولید صنعتی است.",
+                    sales: "مشکلات فروش شامل رقابت با فرش‌های ماشینی، نوسانات بازار ارز و دشواری در صادرات به دلیل تحریم‌ها.",
+                    development: "فرصت‌ها شامل توسعه بازارهای آنلاین، طراحی‌های مدرن‌تر برای جذب نسل جوان و تمرکز بر پایداری و اصالت."
+                },
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Persian+Carpet+1",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Persian+Carpet+2",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Persian+Carpet+3"
+                    "Souvenir's%20Images/carpet-1.jpg",
+                    "Souvenir's%20Images/carpet-2.jpg",
+                    "Souvenir's%20Images/carpet-3.PNG"
                 ],
-                annualProductionUnits: 50000,
-                annualSalesRevenueUSD: 75000000
+                annualProductionUnits: " (3.9 میلیون متر مربع دستباف) حدود 100 میلیون متر مربع",
+                annualSalesRevenueUSD: "از 370 میلیون دلار",
+                annualProductionUnitsSecondCountry: "چین با حدود 60 میلیون متر مربع (ماشینی)", // New field
+                annualSalesRevenueUSDSecondCountry: "چین با 10 میلیارد دلار (ماشینی)" // New field
             },
             {
                 id: 3,
-                name: "کیمونو",
-                englishName: "Kimono",
-                country: "ژاپن",
-                minPriceUSD: 50,
-                maxPriceUSD: 5000,
-                origin: "کیوتو",
-                story: "کیمونو، لباس سنتی ژاپن، بیش از هزار سال قدمت دارد و نمادی از زیبایی، ظرافت و احترام است. هر کیمونو با طرح‌ها و رنگ‌های خاص خود، فصلی، رویدادی یا حتی وضعیت اجتماعی فرد را نشان می‌دهد.",
-                description: "لباس سنتی ژاپنی با طرح‌های متنوع و پارچه‌های ابریشمی یا نخی. برای مراسم خاص و به عنوان سوغات فرهنگی محبوب است.",
-                avgPriceUSD: 300,
-                localPrice: "40,000 JPY",
-                category: ["پوشاک", "فرهنگی"],
-                audience: ["علاقه‌مندان به فرهنگ", "گردشگران", "کلکسیونرها"],
-                materials: "ابریشم، کتان، پلی‌استر",
-                usage: "پوشاک رسمی، تزئین، هدیه",
+                name: "ماسک ونیزی",
+                englishName: "Venetian Mask",
+                country: "ایتالیا",
+                secondCountry: "فرانسه", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 80, // New field
+                origin: "ونیز",
+                story: "ماسک‌ها از قرن‌ها پیش جزء جدایی‌ناپذیر کارناوال ونیز بوده‌اند و به شهروندان اجازه می‌دادند تا بدون توجه به طبقه اجتماعی خود، در جشن‌ها شرکت کنند. هر ماسک شخصیت و تاریخچه‌ای منحصر به فرد دارد.",
+                description: "ماسک‌های دست‌ساز با تزئینات پر، طلا و نقاشی‌های پیچیده. این ماسک‌ها نمادی از تاریخ غنی و فضای اسرارآمیز ونیز هستند.",
+                avgPriceUSD: 60,
+                localPrice: "55 EUR",
+                category: ["دکوری", "صنایع دستی", "پوشاک", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "بزرگسالان", "جوانان", "گردشگران"],
+                materials: "پاپیه ماشه، چرم، سرامیک",
+                usage: "دکور دیوار، هدیه، استفاده در مهمانی‌های بالماسکه",
                 culturalValue: 9,
-                economicValue: 8,
+                economicValue: 7,
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Kimono+1",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Kimono+2",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Kimono+3"
+                    "Souvenir's%20Images/Venice-1.jpg",
+                    "Souvenir's%20Images/Venice-2.jpg",
+                    "Souvenir's%20Images/Venice-3.jpg"
                 ],
-                annualProductionUnits: 200000,
-                annualSalesRevenueUSD: 60000000
+                annualProductionUnits: 80000,
+                annualSalesRevenueUSD: 4800000,
+                annualProductionUnitsSecondCountry: 10000, // New field
+                annualSalesRevenueUSDSecondCountry: 600000 // New field
             },
             {
                 id: 4,
-                name: "ماکت برج ایفل",
-                englishName: "Eiffel Tower Model",
-                country: "فرانسه",
-                minPriceUSD: 5,
-                maxPriceUSD: 100,
-                origin: "پاریس",
-                story: "برج ایفل، نماد پاریس و فرانسه، از زمان ساختش در سال ۱۸۸۹، الهام‌بخش هنرمندان و عاشقان بوده است. ماکت‌های آن، یادگاری کوچک از این شاهکار معماری هستند که خاطرات سفر به پاریس را زنده نگه می‌دارند.",
-                description: "ماکت‌های فلزی یا پلاستیکی در اندازه‌های مختلف از برج ایفل. سوغاتی رایج و محبوب برای گردشگران.",
-                avgPriceUSD: 20,
-                localPrice: "18 EUR",
-                category: ["دکوری", "یادگاری"],
-                audience: ["گردشگران", "عموم مردم"],
-                materials: "فلز، پلاستیک",
-                usage: "تزئین منزل، هدیه",
-                culturalValue: 7,
-                economicValue: 6,
-                imageUrls: [
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Eiffel+Tower+Model+1",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Eiffel+Tower+Model+2",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Eiffel+Tower+Model+3"
-                ],
-                annualProductionUnits: 5000000,
-                annualSalesRevenueUSD: 100000000
-            },
-            {
-                id: 5,
-                name: "سفال لالجین",
-                englishName: "Lalejin Pottery",
-                country: "ایران",
-                origin: "لالجین، همدان",
-                minPriceUSD: 10,
-                maxPriceUSD: 300,
-                story: "لالجین، پایتخت سفال ایران، با قدمتی بیش از ۷۰۰ سال در این هنر، میراث‌دار دانش و مهارت نسل‌هاست. هر قطعه سفال لالجین، با دستان هنرمند صنعتگران این منطقه شکل گرفته و داستان خاک و آتش را روایت می‌کند.",
-                description: "ظروف سفالی دست‌ساز با طرح‌ها و لعاب‌های سنتی. معروف به کیفیت و زیبایی در منطقه لالجین همدان.",
-                avgPriceUSD: 40,
-                localPrice: "2,000,000 IRR",
-                category: ["صنایع دستی", "دکوری", "کاربردی"],
-                audience: ["علاقه‌مندان به صنایع دستی", "گردشگران", "خانه‌داران"],
-                materials: "خاک رس، لعاب",
-                usage: "ظروف غذاخوری، تزئین، گلدان",
+                name: "کیمونو",
+                englishName: "Kimono",
+                country: "ژاپن",
+                secondCountry: "چین", // New field
+                minPriceUSD: 100, // New field
+                maxPriceUSD: 200, // New field
+                origin: "کیوتو",
+                story: "کیمونو لباس سنتی ژاپن است که تاریخ آن به دوره هی‌آن بازمی‌گردد. طراحی، پارچه و نحوه پوشیدن آن نشان‌دهنده موقعیت اجتماعی، سن و مناسبت است.",
+                description: "یک لباس سنتی T شکل که با پارچه‌های ابریشمی زیبا و طرح‌های الهام گرفته از طبیعت ساخته می‌شود. کیمونوهای کوتاه‌تر (Yukata) به عنوان سوغاتی محبوبیت زیادی دارند.",
+                avgPriceUSD: 150,
+                localPrice: "18,000 JPY",
+                category: ["پوشاک", "لوکس", "فرهنگی"],
+                audience: ["زنان", "علاقه‌مندان به فرهنگ", "قشر متوسط", "مدگرایان"],
+                materials: "ابریشم، پنبه",
+                usage: "لباس رسمی، لباس راحتی در خانه، دکور",
                 culturalValue: 9,
                 economicValue: 8,
+                specialNotes: {
+                    production: "تولید کیمونوهای سنتی بسیار پیچیده و زمان‌بر است. چالش اصلی، کمبود صنعتگران ماهر و رقابت با لباس‌های مدرن است.",
+                    sales: "بازار فروش کیمونوهای سنتی محدود به رویدادهای خاص و گردشگران است. قیمت بالا نیز یک چالش است.",
+                    development: "فرصت‌ها شامل طراحی کیمونوهای مدرن‌تر و قابل استفاده در زندگی روزمره، و بازاریابی جهانی از طریق پلتفرم‌های آنلاین."
+                },
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Lalejin+Pottery+1",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Lalejin+Pottery+2",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Lalejin+Pottery+3"
+                    "Souvenir's%20Images/Kimono-3.jpg",
+                    "Souvenir's%20Images/Kimono-2.jpg",
+                    "Souvenir's%20Images/Kimono-1.jpg"
                 ],
-                annualProductionUnits: 800000,
-                annualSalesRevenueUSD: 32000000
+                annualProductionUnits: 20000,
+                annualSalesRevenueUSD: 3000000,
+                annualProductionUnitsSecondCountry: 5000, // New field
+                annualSalesRevenueUSDSecondCountry: 750000 // New field
+            },
+             {
+                id: 5,
+                name: "مجسمه ابوالهول",
+                englishName: "Sphinx Figurine",
+                country: "مصر",
+                secondCountry: "یونان", // New field
+                minPriceUSD: 10, // New field
+                maxPriceUSD: 20, // New field
+                origin: "جیزه، قاهره",
+                story: "ابوالهول بزرگ جیزه، موجودی افسانه‌ای با بدن شیر و سر انسان، یکی از نمادین‌ترین بناهای تاریخی جهان است. این مجسمه‌های کوچک یادآور عظمت و رمز و راز مصر باستان هستند.",
+                description: "ماکت‌های کوچک از ابوالهول که از مواد مختلفی مانند سنگ، فلز یا رزین ساخته می‌شوند و به عنوان یکی از اصلی‌ترین نمادهای مصر خریداری می‌شوند.",
+                avgPriceUSD: 15,
+                localPrice: "250 EGP",
+                category: ["دکوری", "تاریخی", "یادگاری"],
+                audience: ["جوانان", "علاقه‌مندان به تاریخ", "کودکان", "گردشگران"],
+                materials: "سنگ بازالت، رزین، فلز",
+                usage: "دکور میز، یادگاری سفر، هدیه",
+                culturalValue: 6,
+                economicValue: 5,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/Sphinx-1.jpg",
+                    "Souvenir's%20Images/Sphinx-2.jpg",
+                    "Souvenir's%20Images/Sphinx-3.jpg"
+                ],
+                annualProductionUnits: 200000,
+                annualSalesRevenueUSD: 3000000,
+                annualProductionUnitsSecondCountry: 15000, // New field
+                annualSalesRevenueUSDSecondCountry: 225000 // New field
             },
             {
                 id: 6,
-                name: "چاقوی سوئیسی",
-                englishName: "Swiss Army Knife",
-                country: "سوئیس",
-                minPriceUSD: 25,
-                maxPriceUSD: 200,
-                origin: "ایباخ",
-                story: "چاقوی ارتش سوئیس، نمادی از دقت و کارایی سوئیسی، در اواخر قرن ۱۹ برای سربازان طراحی شد. این ابزار چندکاره، با کیفیت و دوام بی‌نظیر، به یک همراه قابل اعتماد برای ماجراجویان و افراد روزمره تبدیل شده است.",
-                description: "ابزار چندکاره شامل چاقو، قیچی، پیچ‌گوشتی و... معروف به کیفیت و دوام بالا.",
-                avgPriceUSD: 60,
-                localPrice: "55 CHF",
-                category: ["ابزار", "یادگاری"],
-                audience: ["ماجراجویان", "گردشگران", "افراد فنی"],
-                materials: "استیل ضد زنگ، پلاستیک",
-                usage: "کاربردهای روزمره، کمپینگ، هدیه",
-                culturalValue: 6,
-                economicValue: 7,
+                name: "کلاه کابوی",
+                englishName: "Cowboy Hat",
+                country: "آمریکا",
+                secondCountry: "مکزیک", // New field
+                minPriceUSD: 60, // New field
+                maxPriceUSD: 100, // New field
+                origin: "تگزاس",
+                story: "این کلاه که در قرن ۱۹ برای محافظت گاوچرانان از آفتاب و باران طراحی شد، به نمادی از غرب وحشی، استقلال و روح ماجراجوی آمریکایی تبدیل شده است.",
+                description: "کلاهی با لبه پهن که معمولاً از نمد یا چرم ساخته می‌شود. این کلاه فراتر از یک پوشش سر، بخشی از هویت فرهنگی مناطق غربی و جنوبی آمریکاست.",
+                avgPriceUSD: 80,
+                localPrice: "80 USD",
+                category: ["پوشاک", "مد", "فرهنگی"],
+                audience: ["مردان", "ورزشکاران", "علاقه‌مندان به فرهنگ", "گردشگران"],
+                materials: "نمد، چرم",
+                usage: "پوشش روزمره، مد و فشن, یادگاری",
+                culturalValue: 7,
+                economicValue: 6,
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Swiss+Army+Knife+1",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Swiss+Army+Knife+2",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Swiss+Army+Knife+3"
+                    "Souvenir's%20Images/Cowboy-3.PNG",
+                    "Souvenir's%20Images/Cowboy-2.jpg",
+                    "Souvenir's%20Images/Cowboy-1.PNG"
                 ],
-                annualProductionUnits: 4000000,
-                annualSalesRevenueUSD: 240000000
+                annualProductionUnits: 75000,
+                annualSalesRevenueUSD: 6000000,
+                annualProductionUnitsSecondCountry: 20000, // New field
+                annualSalesRevenueUSDSecondCountry: 1600000 // New field
             },
             {
                 id: 7,
-                name: "فانوس مراکشی",
-                englishName: "Moroccan Lantern",
-                country: "مراکش",
-                minPriceUSD: 30,
-                maxPriceUSD: 400,
-                origin: "فاس",
-                story: "فانوس‌های مراکشی، با نورهای گرم و الگوهای پیچیده‌شان، فضایی جادویی و عرفانی خلق می‌کنند. این فانوس‌ها که ریشه در معماری اسلامی و فرهنگ مراکش دارند، نمادی از مهمان‌نوازی و زیبایی شرق هستند.",
-                description: "فانوس‌های فلزی دست‌ساز با شیشه‌های رنگی و طرح‌های هندسی. برای تزئین و ایجاد فضای خاص.",
-                avgPriceUSD: 80,
-                localPrice: "800 MAD",
-                category: ["دکوری", "صنایع دستی"],
-                audience: ["علاقه‌مندان به دکوراسیون", "گردشگران", "کلکسیونرها"],
-                materials: "فلز (برنج، مس، آهن), شیشه رنگی",
-                usage: "تزئین منزل، باغ، کافه",
+                name: "بومرنگ",
+                englishName: "Boomerang",
+                country: "استرالیا",
+                secondCountry: "نیوزلند", // New field
+                minPriceUSD: 15, // New field
+                maxPriceUSD: 35, // New field
+                origin: "سرزمین آرنهم",
+                story: "بومرنگ ابزار شکار سنتی بومیان استرالیا است. مدل‌های بازگردنده آن برای سرگرمی و ورزش استفاده می‌شدند و طراحی آن نیازمند دانش عمیق آیرودینامیک است.",
+                description: "یک وسیله چوبی پرتابی که به دلیل توانایی بازگشت به پرتاب‌کننده مشهور است. بومرنگ‌های تزئینی با هنر بومیان استرالیا نقاشی می‌شوند.",
+                avgPriceUSD: 25,
+                localPrice: "35 AUD",
+                category: ["صنایع دستی", "اسباب بازی", "ورزشی", "فرهنگی"],
+                audience: ["کودکان", "ورزشکاران", "علاقه‌مندان به فرهنگ", "گردشگران"],
+                materials: "چوب اکالیپتوس",
+                usage: "اسباب بازی، دکور، هدیه ورزشی",
                 culturalValue: 8,
-                economicValue: 7,
+                economicValue: 6,
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Moroccan+Lantern+1",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Moroccan+Lantern+2",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Moroccan+Lantern+3"
+                    "Souvenir's%20Images/boomrang-1.jpg",
+                    "Souvenir's%20Images/boomrang-2.PNG",
+                    "Souvenir's%20Images/boomrang-3.jpg"
                 ],
-                annualProductionUnits: 300000,
-                annualSalesRevenueUSD: 24000000
+                annualProductionUnits: 120000,
+                annualSalesRevenueUSD: 3000000,
+                annualProductionUnitsSecondCountry: 10000, // New field
+                annualSalesRevenueUSDSecondCountry: 250000 // New field
             },
-            {
+             {
                 id: 8,
-                name: "ماسک آفریقایی",
-                englishName: "African Mask",
-                country: "غنا",
-                minPriceUSD: 40,
-                maxPriceUSD: 1000,
-                origin: "آشانتی",
-                story: "ماسک‌های آفریقایی، فراتر از یک شیء هنری، نمادی از روح و هویت قبایل آفریقایی هستند. هر ماسک داستانی از اجداد، ارواح طبیعت یا مراسم آیینی را روایت می‌کند و در رقص‌ها و جشن‌ها به کار می‌رود.",
-                description: "ماسک‌های چوبی یا فلزی حکاکی شده با طرح‌های سنتی و نمادین. بخشی از فرهنگ و مراسم قبایل آفریقایی.",
-                avgPriceUSD: 150,
-                localPrice: "1800 GHS",
-                category: ["هنری", "فرهنگی", "دکوری"],
-                audience: ["کلکسیونرها", "علاقه‌مندان به فرهنگ آفریقا", "موزه‌ها"],
-                materials: "چوب، فلز، صدف، مهره",
-                usage: "تزئین، مراسم آیینی، کلکسیون",
-                culturalValue: 9,
-                economicValue: 7,
+                name: "کفش چوبی هلندی",
+                englishName: "Dutch Clogs (Klompen)",
+                country: "هلند",
+                secondCountry: "بلژیک", // New field
+                minPriceUSD: 20, // New field
+                maxPriceUSD: 40, // New field
+                origin: "Zaanse Schans",
+                story: "این کفش‌های چوبی در ابتدا توسط کشاورزان و کارگران برای محافظت از پا در زمین‌های گلی استفاده می‌شد. امروزه آنها نمادی از فرهنگ روستایی و سخت‌کوشی هلندی‌ها هستند.",
+                description: "کفش‌های ساخته شده از یک تکه چوب که به صورت تزئینی رنگ‌آمیزی می‌شوند. اگرچه هنوز در برخی مناطق روستایی پوشیده می‌شوند، اما بیشتر به عنوان سوغاتی محبوب هستند.",
+                avgPriceUSD: 30,
+                localPrice: "28 EUR",
+                category: ["دکوری", "پوشاک", "فرهنگی"],
+                audience: ["بزرگسالان", "علاقه‌مندان به فرهنگ", "گردشگران"],
+                materials: "چوب صنوبر یا بید",
+                usage: "گلدان، دکور دیوار، یادگاری",
+                culturalValue: 7,
+                economicValue: 5,
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=African+Mask+1",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=African+Mask+2",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=African+Mask+3"
+                    "Souvenir's%20Images/Klompen-1.jpg",
+                    "Souvenir's%20Images/Klompen-2.jpg",
+                    "Souvenir's%20Images/Klompen-3.jpg"
                 ],
-                annualProductionUnits: 100000,
-                annualSalesRevenueUSD: 15000000
+                annualProductionUnits: 90000,
+                annualSalesRevenueUSD: 2700000,
+                annualProductionUnitsSecondCountry: 8000, // New field
+                annualSalesRevenueUSDSecondCountry: 240000 // New field
             },
             {
                 id: 9,
-                name: "کفش چوبی هلندی (کلوپن)",
-                englishName: "Dutch Wooden Shoes (Klompen)",
-                country: "هلند",
-                minPriceUSD: 20,
-                maxPriceUSD: 80,
-                origin: "آمستردام",
-                story: "کلوپن، کفش‌های چوبی سنتی هلند، از قرن ۱۳ میلادی توسط کشاورزان و کارگران برای محافظت از پاها در برابر رطوبت و سرما استفاده می‌شدند. امروزه، این کفش‌ها نمادی از فرهنگ هلند و سوغاتی محبوب هستند.",
-                description: "کفش‌های چوبی حکاکی شده و رنگ‌آمیزی شده. نمادی از فرهنگ هلند.",
+                name: "فانوس مراکشی",
+                englishName: "Moroccan Lantern",
+                country: "مراکش",
+                secondCountry: "تونس", // New field
+                minPriceUSD: 30, // New field
+                maxPriceUSD: 60, // New field
+                origin: "فاس، مراکش",
+                story: "فانوس‌های مراکشی ریشه‌های عمیقی در معماری اسلامی و فرهنگ عربی دارند. آنها نه تنها منبع نور، بلکه نمادی از مهمان‌نوازی و زیبایی‌های شرق هستند.",
+                description: "فانوس‌های دست‌ساز از فلز و شیشه‌های رنگی که نور را به زیبایی منعکس می‌کنند. بسیار محبوب برای تزئین منزل و ایجاد فضایی گرم و شرقی.",
                 avgPriceUSD: 45,
-                localPrice: "40 EUR",
-                category: ["پوشاک", "فرهنگی", "یادگاری"],
-                audience: ["گردشگران", "علاقه‌مندان به فرهنگ"],
-                materials: "چوب بید یا صنوبر",
-                usage: "تزئین، پوشاک سنتی، هدیه",
-                culturalValue: 7,
+                localPrice: "400 MAD",
+                category: ["دکوری", "صنایع دستی", "هنری"],
+                audience: ["بزرگسالان", "علاقه‌مندان به هنر", "گردشگران"],
+                materials: "آهن، مس، شیشه رنگی",
+                usage: "روشنایی، دکوراسیون، هدیه",
+                culturalValue: 8,
                 economicValue: 6,
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Klompen+1",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Klompen+2",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Klompen+3"
+                    "Souvenir's%20Images/Lantern-1.jpg",
+                    "Souvenir's%20Images/Lantern-2.PNG",
+                    "Souvenir's%20Images/Lantern-3.PNG"
                 ],
-                annualProductionUnits: 600000,
-                annualSalesRevenueUSD: 27000000
+                annualProductionUnits: 60000,
+                annualSalesRevenueUSD: 2700000,
+                annualProductionUnitsSecondCountry: 5000, // New field
+                annualSalesRevenueUSDSecondCountry: 225000 // New field
             },
             {
                 id: 10,
-                name: "چای‌خوری روسی (سماور)",
-                englishName: "Russian Samovar",
-                country: "روسیه",
-                minPriceUSD: 50,
-                maxPriceUSD: 1000,
-                origin: "تولا",
-                story: "سماور، قلب خانه روسی، بیش از ۲۰۰ سال است که نمادی از مهمان‌نوازی و دورهمی‌های گرم خانوادگی است. صدای جوشیدن آب در سماور، نویدبخش لحظاتی آرام و دلنشین با چای است.",
-                description: "ظرف فلزی برای جوشاندن آب و دم کردن چای، نمادی از فرهنگ چای‌خوری روسی.",
-                avgPriceUSD: 250,
-                localPrice: "18,000 RUB",
-                category: ["لوازم خانگی", "فرهنگی", "دکوری"],
-                audience: ["علاقه‌مندان به فرهنگ", "کلکسیونرها", "خانه‌داران"],
-                materials: "مس، برنج، استیل ضد زنگ",
-                usage: "تهیه چای، دکوراسیون",
-                culturalValue: 8,
+                name: "سفال یونانی",
+                englishName: "Greek Pottery",
+                country: "یونان",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
                 economicValue: 7,
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Samovar+1",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Samovar+2",
-                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Samovar+3"
+                    "Souvenir's%20Images/Greek-1.PNG",
+                    "Souvenir's%20Images/Greek-2.PNG",
+                    "Souvenir's%20Images/Greek-3.jpg"
                 ],
-                annualProductionUnits: 150000,
-                annualSalesRevenueUSD: 37500000
-            }
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+             {
+                id: 11,
+                name: "چینی و سفال سنتی",
+                englishName: "Porcelain",
+                country: "ترکیه",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/porcelain.jpg",
+                    "Souvenir's%20Images/porcelain-4.jpeg",
+                    "Souvenir's%20Images/porcelain-5.jpeg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+             {
+                id: 12,
+                name: "عُود (عطر) عربی",
+                englishName: "Arabian Oud",
+                country: "عربستان",
+                secondCountry: "قطر", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/arabian_oud.jpg",
+                    "Souvenir's%20Images/arabian_oud-2.jpg",
+                    "Souvenir's%20Images/arabian_oud-3.jpg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+             {
+                id: 13,
+                name: "قالی و گلیم آذربایجانی",
+                englishName: "Xalça",
+                country: "یونان",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/xalca-1.jpg",
+                    "Souvenir's%20Images/xalca-2.jpg",
+                    "Souvenir's%20Images/xalca-3.jpg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+             {
+                id: 14,
+                name: "کلاه خزدار روسی",
+                englishName: "Ushanka",
+                country: "یونان",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/ushanka-1.jpg",
+                    "Souvenir's%20Images/ushanka-2.jpg",
+                    "Souvenir's%20Images/ushanka-3.jpg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+             {
+                id: 15,
+                name: "ابریشم چینی",
+                englishName: "chinese silk",
+                country: "یونان",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/silk-1.jpg",
+                    "Souvenir's%20Images/silk-2.jpg",
+                    "Souvenir's%20Images/silk-3.jpg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+             {
+                id: 16,
+                name: "چشم نظر",
+                englishName: "Nazar Boncuğu",
+                country: "ترکیه",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/nazar-1.jpg",
+                    "Souvenir's%20Images/nazar-2.jpg",
+                    "Souvenir's%20Images/nazar-3.jpg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+             {
+                id: 17,
+                name: "شال کشمیری",
+                englishName: "Kashmiri Shawl",
+                country: "منطقه کشمیر (هند و پاکستان)",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/shawls.jpg",
+                    "Souvenir's%20Images/shawls-1.jpg",
+                    "Souvenir's%20Images/shawls-2.jpg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+             {
+                id: 18,
+                name: "کفش دست دوز",
+                englishName: "Khussa",
+                country: "پاکستان",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/khussa-1.jpg",
+                    "Souvenir's%20Images/khussa-2.jpg",
+                    "Souvenir's%20Images/khussa-3.jpg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+             {
+                id: 19,
+                name: "دَله",
+                englishName: "Dallah",
+                country: "عربستان",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/Dallah-1.jpg",
+                    "Souvenir's%20Images/dallah-2.jpg",
+                    "Souvenir's%20Images/dallah-3.jpg",
+                    "Souvenir's%20Images/dallah-4.jpg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+            {
+                id: 20,
+                name: "ماکت اماکن دیدنی",
+                englishName: "Burj Khalifa Souvenir",
+                country: "امارات",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/burj-1.jfif",
+                    "Souvenir's%20Images/burj-2.jpg",
+                    "Souvenir's%20Images/burj-3.jpg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
+            {
+                id: 21,
+                name: "ساری ابریشمی",
+                englishName: "Silk sarees",
+                country: "هند",
+                secondCountry: "قبرس", // New field
+                minPriceUSD: 40, // New field
+                maxPriceUSD: 70, // New field
+                origin: "آتن، کرت",
+                story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
+                description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
+                avgPriceUSD: 55,
+                localPrice: "50 EUR",
+                category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
+                audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
+                materials: "خاک رس، رنگ‌های معدنی",
+                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                culturalValue: 9,
+                economicValue: 7,
+                // Updated to imageUrls array
+                imageUrls: [
+                    "Souvenir's%20Images/sareens-1.jpg",
+                    "Souvenir's%20Images/sareens-2.jpg",
+                    "Souvenir's%20Images/sareens-3.jpg"
+                ],
+                annualProductionUnits: 70000,
+                annualSalesRevenueUSD: 3850000,
+                annualProductionUnitsSecondCountry: 6000, // New field
+                annualSalesRevenueUSDSecondCountry: 330000 // New field
+            },
         ].map(p => ({
             ...p,
             // New characteristics
