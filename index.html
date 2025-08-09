@@ -2394,7 +2394,7 @@
                     countryCard.innerHTML = `
                         <h3 class="text-xl font-bold text-[#34658F] mb-3">${country.name}</h3>
                         <p class="text-gray-700 mb-2"><strong>تعداد گردشگر:</strong> ${country.tourists}</p>
-                        <p class="text-gray-700 mb-2"><strong>متوسط سبد خرید:</strong> ${country.avgSpending}$</p>
+                        <p class="text-gray-700 mb-2"><strong>متوسط هزینه سفر به مدت یک روز:</strong> ${country.avgSpending}$</p>
                         <p class="text-gray-700 mb-2"><strong>درآمد سالانه از گردشگری:</strong> ${country.annualTourismRevenue}</p>
                         <p class="text-gray-700 mb-2"><strong>درآمد سرانه:</strong> ${country.perCapitaIncome}</p> <!-- Added per capita income -->
                         <p class="text-gray-700 mb-2"><strong>محصولات محبوب:</strong> ${country.popularProducts.join(', ')}</p>
@@ -2435,7 +2435,7 @@
                     <div class="bg-gray-50 p-4 rounded-lg mt-4">
                         <h4 class="font-bold text-lg mb-3 text-[#4F80B9]">تحلیل هزینه‌ها (سرانه)</h4>
                         <ul class="space-y-3 text-gray-800">
-                            <li class="flex justify-between"><strong>متوسط سبد خرید:</strong> <span>${country.avgSpending}$</span></li>
+                            <li class="flex justify-between"><strong>متوسط هزینه سفر به مدت یک روز:</strong> <span>${country.avgSpending}$</span></li>
                             <li class="flex justify-between"><strong>درصد هزینه سوغاتی:</strong> <span>${country.souvenirCost}$</span></li>
                             <li class="flex justify-between"><strong>متوسط هزینه پرواز:</strong> <span>${country.transportationCost}$</span></li>
                             <li class="flex justify-between"><strong>هزینه اسکان:</strong> <span>${country.accommodationCost}$</span></li>
