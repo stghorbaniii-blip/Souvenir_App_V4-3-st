@@ -161,33 +161,17 @@
                             <option value="all">همه دسته‌ها</option>
                         </select>
                     </div>
-                    <!-- Price Range Filter (Min/Max) -->
                     <div>
-                        <label for="min-price-filter" class="block text-sm font-medium text-gray-700 mb-1">حداقل قیمت (دلار)</label>
-                        <input type="number" id="min-price-filter" min="0" value="0" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4F80B9] focus:border-[#4F80B9]">
+                        <label for="price-filter" class="block text-sm font-medium text-gray-700 mb-1">حداکثر قیمت (دلار)</label>
+                        <input type="range" id="price-filter" min="0" max="500" value="500" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                        <span id="price-value" class="block text-center text-gray-600 mt-1">500$</span>
                     </div>
-                    <div>
-                        <label for="max-price-filter" class="block text-sm font-medium text-gray-700 mb-1">حداکثر قیمت (دلار)</label>
-                        <input type="number" id="max-price-filter" min="0" value="500" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4F80B9] focus:border-[#4F80B9]">
-                        <span id="price-value" class="block text-center text-gray-600 mt-1">0$-500$</span>
-                    </div>
-                    <!-- End Price Range Filter -->
                     <div>
                         <label for="audience-filter" class="block text-sm font-medium text-gray-700 mb-1">مخاطب</label>
                         <select id="audience-filter" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4F80B9] focus:border-[#4F80B9]">
                             <option value="all">همه</option>
                         </select>
                     </div>
-                    <!-- Sort by Price -->
-                    <div>
-                        <label for="sort-by-price" class="block text-sm font-medium text-gray-700 mb-1">مرتب سازی بر اساس قیمت</label>
-                        <select id="sort-by-price" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4F80B9] focus:border-[#4F80B9]">
-                            <option value="none">بدون مرتب سازی</option>
-                            <option value="asc">قیمت: کم به زیاد</option>
-                            <option value="desc">قیمت: زیاد به کم</option>
-                        </select>
-                    </div>
-                    <!-- End Sort by Price -->
                 </div>
                 <div class="flex justify-center gap-4 mt-6">
                     <button id="show-ranking-btn" class="bg-[#4F80B9] text-white px-6 py-2 rounded-md hover:bg-[#34658F] transition-colors">نمایش رتبه‌بندی</button>
@@ -297,7 +281,7 @@
              <div class="bg-white p-6 rounded-lg shadow">
                 <h2 class="text-2xl font-semibold text-[#34658F] mb-4 text-center">فروشگاه‌های مطرح سوغات</h2>
                 <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">در این بخش، فهرستی از فروشگاه‌های معتبر فیزیکی و آنلاین که به صورت تخصصی در زمینه فروش سوغات و صنایع دستی فعالیت می‌کنند، ارائه شده است. می‌توانید برای یافتن فروشگاه مورد نظر، در کادر زیر جستجو کنید.</p>
-                <div class="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label for="store-search" class="block text-sm font-medium text-gray-700 mb-1">جستجوی فروشگاه</label>
                         <input type="text" id="store-search" placeholder="جستجوی فروشگاه بر اساس نام یا کشور..." class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4F80B9] focus:border-[#4F80B9]">
@@ -310,14 +294,6 @@
                             <option value="retail">فروشگاه‌های خرده‌فروشی</option>
                         </select>
                     </div>
-                    <!-- New: Store Country Filter -->
-                    <div>
-                        <label for="store-country-filter" class="block text-sm font-medium text-gray-700 mb-1">کشور</label>
-                        <select id="store-country-filter" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#4F80B9] focus:border-[#4F80B9]">
-                            <option value="all">همه کشورها</option>
-                        </select>
-                    </div>
-                    <!-- End New: Store Country Filter -->
                 </div>
                 <div id="store-list" class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 </div>
@@ -328,34 +304,6 @@
             <div class="bg-white p-6 rounded-lg shadow mb-6">
                 <h2 class="text-2xl font-semibold text-[#34658F] mb-4 text-center">بررسی کشورها</h2>
                 <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">این بخش به بررسی جزئیات مربوط به گردشگری و بازار سوغات در کشورهای مختلف می‌پردازد. می‌توانید اطلاعات مربوط به تعداد گردشگران، سبد خرید متوسط و محصولات محبوب هر کشور را مشاهده کنید.</p>
-                <!-- New: Country Filters -->
-                <div class="mb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div>
-                        <label for="tourist-count-filter-min" class="block text-sm font-medium text-gray-700 mb-1">حداقل تعداد گردشگر (میلیون)</label>
-                        <input type="number" id="tourist-count-filter-min" min="0" value="0" class="w-full p-2 border border-gray-300 rounded-md shadow-sm">
-                    </div>
-                    <div>
-                        <label for="tourist-count-filter-max" class="block text-sm font-medium text-gray-700 mb-1">حداکثر تعداد گردشگر (میلیون)</label>
-                        <input type="number" id="tourist-count-filter-max" min="0" value="100" class="w-full p-2 border border-gray-300 rounded-md shadow-sm">
-                    </div>
-                    <div>
-                        <label for="avg-spending-filter-min" class="block text-sm font-medium text-gray-700 mb-1">حداقل متوسط سبد خرید (دلار)</label>
-                        <input type="number" id="avg-spending-filter-min" min="0" value="0" class="w-full p-2 border border-gray-300 rounded-md shadow-sm">
-                    </div>
-                    <div>
-                        <label for="avg-spending-filter-max" class="block text-sm font-medium text-gray-700 mb-1">حداکثر متوسط سبد خرید (دلار)</label>
-                        <input type="number" id="avg-spending-filter-max" min="0" value="500" class="w-full p-2 border border-gray-300 rounded-md shadow-sm">
-                    </div>
-                    <div>
-                        <label for="annual-revenue-filter-min" class="block text-sm font-medium text-gray-700 mb-1">حداقل درآمد سالانه (میلیارد دلار)</label>
-                        <input type="number" id="annual-revenue-filter-min" min="0" value="0" class="w-full p-2 border border-gray-300 rounded-md shadow-sm">
-                    </div>
-                    <div>
-                        <label for="annual-revenue-filter-max" class="block text-sm font-medium text-gray-700 mb-1">حداکثر درآمد سالانه (میلیارد دلار)</label>
-                        <input type="number" id="annual-revenue-filter-max" min="0" value="100" class="w-full p-2 border border-gray-300 rounded-md shadow-sm">
-                    </div>
-                </div>
-                <!-- End New: Country Filters -->
                 <div class="flex justify-center gap-4 mt-6 mb-6">
                     <button id="show-analysis-btn" class="bg-[#4F80B9] text-white px-6 py-2 rounded-md hover:bg-[#34658F] transition-colors">نمایش تحلیل هزینه‌ها</button>
                 </div>
@@ -384,34 +332,6 @@
                     <p><strong>سطح اقتصادی:</strong> <span id="global-economic-levels"></span></p>
                     <p><strong>ترکیب جمعیتی:</strong> <span id="global-demographics"></span></p>
                 </div>
-                <!-- New: Tourist Analysis Filters -->
-                <div class="mb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div>
-                        <label for="travel-purpose-filter" class="block text-sm font-medium text-gray-700 mb-1">هدف سفر</label>
-                        <select id="travel-purpose-filter" class="w-full p-2 border border-gray-300 rounded-md shadow-sm">
-                            <option value="all">همه</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="age-group-filter" class="block text-sm font-medium text-gray-700 mb-1">سن گردشگران</label>
-                        <select id="age-group-filter" class="w-full p-2 border border-gray-300 rounded-md shadow-sm">
-                            <option value="all">همه</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="economic-level-filter" class="block text-sm font-medium text-gray-700 mb-1">سطح اقتصادی</label>
-                        <select id="economic-level-filter" class="w-full p-2 border border-gray-300 rounded-md shadow-sm">
-                            <option value="all">همه</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="demographic-filter" class="block text-sm font-medium text-gray-700 mb-1">ترکیب جمعیتی</label>
-                        <select id="demographic-filter" class="w-full p-2 border border-gray-300 rounded-md shadow-sm">
-                            <option value="all">همه</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- End New: Tourist Analysis Filters -->
                 <div id="tourist-analysis-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <!-- Tourist analysis country cards will be rendered here -->
                 </div>
@@ -505,7 +425,7 @@
                 story: "این عروسک‌های تودرتو که نماد مادری و باروری هستند، در اواخر قرن ۱۹ ظهور کردند. هر مجموعه داستانی از یک خانواده یا یک افسانه محلی را روایت می‌کند و به نمادی از روح روسی تبدیل شده است.",
                 description: "مجموعه‌ای از عروسک‌های چوبی با اندازه‌های کاهشی که یکی درون دیگری قرار می‌گیرد. این سوغاتی به دلیل هنر نقاشی دستی و مفهوم فرهنگی‌اش بسیار محبوب است.",
                 avgPriceUSD: 35,
-                localPrice: "2500 RUB",
+                localPrice: "2779 RUB",
                 category: ["دکوری", "اسباب بازی"],
                 audience: ["بزرگسالان", "علاقه‌مندان به فرهنگ", "کلکسیونرها"],
                 materials: "چوب درخت لیندن، رنگ گواش",
@@ -534,8 +454,8 @@
                 origin: "کاشان، اصفهان، تبریز",
                 story: "هنر قالی‌بافی در ایران قدمتی بیش از ۲۵۰۰ سال دارد و با فرهنگ و هنر این سرزمین گره خورده است. هر طرح و نقش، بازتابی از طبیعت، شعر و اساطیر ایرانی است.",
                 description: "فرش‌های دستباف ایرانی به دلیل کیفیت، طرح‌های پیچیده و رنگ‌های طبیعی شهرت جهانی دارند. این فرش‌ها نه تنها یک کف‌پوش، بلکه یک سرمایه‌گذاری هنری محسوب می‌شوند.",
-                avgPriceUSD: 450,
-                localPrice: "25,000,000 IRR",
+                avgPriceUSD: 500,
+                localPrice: "00,000,000 IRR",
                 category: ["صنایع دستی", "دکوری", "لوکس", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "قشر پولدار", "بزرگسالان", "سرمایه‌گذاران"],
                 materials: "پشم، ابریشم, رنگ‌های گیاهی",
@@ -563,14 +483,14 @@
                 name: "ماسک ونیزی",
                 englishName: "Venetian Mask",
                 country: "ایتالیا",
-                secondCountry: "فرانسه", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 80, // New field
+                secondCountry: "چین", // New field
+                minPriceUSD: 20, // New field
+                maxPriceUSD: 200, // New field
                 origin: "ونیز",
                 story: "ماسک‌ها از قرن‌ها پیش جزء جدایی‌ناپذیر کارناوال ونیز بوده‌اند و به شهروندان اجازه می‌دادند تا بدون توجه به طبقه اجتماعی خود، در جشن‌ها شرکت کنند. هر ماسک شخصیت و تاریخچه‌ای منحصر به فرد دارد.",
                 description: "ماسک‌های دست‌ساز با تزئینات پر، طلا و نقاشی‌های پیچیده. این ماسک‌ها نمادی از تاریخ غنی و فضای اسرارآمیز ونیز هستند.",
-                avgPriceUSD: 60,
-                localPrice: "55 EUR",
+                avgPriceUSD: 50,
+                localPrice: "42.92 EUR",
                 category: ["دکوری", "صنایع دستی", "پوشاک", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "بزرگسالان", "جوانان", "گردشگران"],
                 materials: "پاپیه ماشه، چرم، سرامیک",
@@ -595,12 +515,12 @@
                 country: "ژاپن",
                 secondCountry: "چین", // New field
                 minPriceUSD: 100, // New field
-                maxPriceUSD: 200, // New field
+                maxPriceUSD: 5000, // New field
                 origin: "کیوتو",
                 story: "کیمونو لباس سنتی ژاپن است که تاریخ آن به دوره هی‌آن بازمی‌گردد. طراحی، پارچه و نحوه پوشیدن آن نشان‌دهنده موقعیت اجتماعی، سن و مناسبت است.",
                 description: "یک لباس سنتی T شکل که با پارچه‌های ابریشمی زیبا و طرح‌های الهام گرفته از طبیعت ساخته می‌شود. کیمونوهای کوتاه‌تر (Yukata) به عنوان سوغاتی محبوبیت زیادی دارند.",
-                avgPriceUSD: 150,
-                localPrice: "18,000 JPY",
+                avgPriceUSD: 500,
+                localPrice: "73,910 JPY",
                 category: ["پوشاک", "لوکس", "فرهنگی"],
                 audience: ["زنان", "علاقه‌مندان به فرهنگ", "قشر متوسط", "مدگرایان"],
                 materials: "ابریشم، پنبه",
@@ -628,14 +548,14 @@
                 name: "مجسمه ابوالهول",
                 englishName: "Sphinx Figurine",
                 country: "مصر",
-                secondCountry: "یونان", // New field
+                secondCountry: "چین", // New field
                 minPriceUSD: 10, // New field
-                maxPriceUSD: 20, // New field
+                maxPriceUSD: 500, // New field
                 origin: "جیزه، قاهره",
                 story: "ابوالهول بزرگ جیزه، موجودی افسانه‌ای با بدن شیر و سر انسان، یکی از نمادین‌ترین بناهای تاریخی جهان است. این مجسمه‌های کوچک یادآور عظمت و رمز و راز مصر باستان هستند.",
                 description: "ماکت‌های کوچک از ابوالهول که از مواد مختلفی مانند سنگ، فلز یا رزین ساخته می‌شوند و به عنوان یکی از اصلی‌ترین نمادهای مصر خریداری می‌شوند.",
-                avgPriceUSD: 15,
-                localPrice: "250 EGP",
+                avgPriceUSD: 50,
+                localPrice: "2410 EGP",
                 category: ["دکوری", "تاریخی", "یادگاری"],
                 audience: ["جوانان", "علاقه‌مندان به تاریخ", "کودکان", "گردشگران"],
                 materials: "سنگ بازالت، رزین، فلز",
@@ -659,13 +579,13 @@
                 englishName: "Cowboy Hat",
                 country: "آمریکا",
                 secondCountry: "مکزیک", // New field
-                minPriceUSD: 60, // New field
-                maxPriceUSD: 100, // New field
+                minPriceUSD: 20, // New field
+                maxPriceUSD: 150, // New field
                 origin: "تگزاس",
                 story: "این کلاه که در قرن ۱۹ برای محافظت گاوچرانان از آفتاب و باران طراحی شد، به نمادی از غرب وحشی، استقلال و روح ماجراجوی آمریکایی تبدیل شده است.",
                 description: "کلاهی با لبه پهن که معمولاً از نمد یا چرم ساخته می‌شود. این کلاه فراتر از یک پوشش سر، بخشی از هویت فرهنگی مناطق غربی و جنوبی آمریکاست.",
-                avgPriceUSD: 80,
-                localPrice: "80 USD",
+                avgPriceUSD: 50,
+                localPrice: "50 USD",
                 category: ["پوشاک", "مد", "فرهنگی"],
                 audience: ["مردان", "ورزشکاران", "علاقه‌مندان به فرهنگ", "گردشگران"],
                 materials: "نمد، چرم",
@@ -688,14 +608,14 @@
                 name: "بومرنگ",
                 englishName: "Boomerang",
                 country: "استرالیا",
-                secondCountry: "نیوزلند", // New field
-                minPriceUSD: 15, // New field
-                maxPriceUSD: 35, // New field
+                secondCountry: "ایالات متحده", // New field
+                minPriceUSD: 10, // New field
+                maxPriceUSD: 50, // New field
                 origin: "سرزمین آرنهم",
                 story: "بومرنگ ابزار شکار سنتی بومیان استرالیا است. مدل‌های بازگردنده آن برای سرگرمی و ورزش استفاده می‌شدند و طراحی آن نیازمند دانش عمیق آیرودینامیک است.",
                 description: "یک وسیله چوبی پرتابی که به دلیل توانایی بازگشت به پرتاب‌کننده مشهور است. بومرنگ‌های تزئینی با هنر بومیان استرالیا نقاشی می‌شوند.",
-                avgPriceUSD: 25,
-                localPrice: "35 AUD",
+                avgPriceUSD: 20,
+                localPrice: "30.65 AUD",
                 category: ["صنایع دستی", "اسباب بازی", "ورزشی", "فرهنگی"],
                 audience: ["کودکان", "ورزشکاران", "علاقه‌مندان به فرهنگ", "گردشگران"],
                 materials: "چوب اکالیپتوس",
@@ -718,14 +638,14 @@
                 name: "کفش چوبی هلندی",
                 englishName: "Dutch Clogs (Klompen)",
                 country: "هلند",
-                secondCountry: "بلژیک", // New field
-                minPriceUSD: 20, // New field
-                maxPriceUSD: 40, // New field
+                secondCountry: "چین", // New field
+                minPriceUSD: 5, // New field
+                maxPriceUSD: 30, // New field
                 origin: "Zaanse Schans",
                 story: "این کفش‌های چوبی در ابتدا توسط کشاورزان و کارگران برای محافظت از پا در زمین‌های گلی استفاده می‌شد. امروزه آنها نمادی از فرهنگ روستایی و سخت‌کوشی هلندی‌ها هستند.",
                 description: "کفش‌های ساخته شده از یک تکه چوب که به صورت تزئینی رنگ‌آمیزی می‌شوند. اگرچه هنوز در برخی مناطق روستایی پوشیده می‌شوند، اما بیشتر به عنوان سوغاتی محبوب هستند.",
-                avgPriceUSD: 30,
-                localPrice: "28 EUR",
+                avgPriceUSD: 15,
+                localPrice: "12.87 EUR",
                 category: ["دکوری", "پوشاک", "فرهنگی"],
                 audience: ["بزرگسالان", "علاقه‌مندان به فرهنگ", "گردشگران"],
                 materials: "چوب صنوبر یا بید",
@@ -748,14 +668,14 @@
                 name: "فانوس مراکشی",
                 englishName: "Moroccan Lantern",
                 country: "مراکش",
-                secondCountry: "تونس", // New field
-                minPriceUSD: 30, // New field
-                maxPriceUSD: 60, // New field
+                secondCountry: "؟ ترکیه یا مصر ؟", // New field
+                minPriceUSD: 20, // New field
+                maxPriceUSD: 200, // New field
                 origin: "فاس، مراکش",
                 story: "فانوس‌های مراکشی ریشه‌های عمیقی در معماری اسلامی و فرهنگ عربی دارند. آنها نه تنها منبع نور، بلکه نمادی از مهمان‌نوازی و زیبایی‌های شرق هستند.",
                 description: "فانوس‌های دست‌ساز از فلز و شیشه‌های رنگی که نور را به زیبایی منعکس می‌کنند. بسیار محبوب برای تزئین منزل و ایجاد فضایی گرم و شرقی.",
-                avgPriceUSD: 45,
-                localPrice: "400 MAD",
+                avgPriceUSD: 50,
+                localPrice: "452 MAD",
                 category: ["دکوری", "صنایع دستی", "هنری"],
                 audience: ["بزرگسالان", "علاقه‌مندان به هنر", "گردشگران"],
                 materials: "آهن، مس، شیشه رنگی",
@@ -778,14 +698,14 @@
                 name: "سفال یونانی",
                 englishName: "Greek Pottery",
                 country: "یونان",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                secondCountry: "چین", // New field
+                minPriceUSD: 10, // New field
+                maxPriceUSD: 100, // New field
+                origin: "آتن (آرگولیس)، کورینت",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 30,
+                localPrice: "00 EUR",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
                 materials: "خاک رس، رنگ‌های معدنی",
@@ -807,18 +727,18 @@
                 id: 11,
                 name: "چینی و سفال سنتی",
                 englishName: "Porcelain",
-                country: "ترکیه",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                country: "چین",
+                secondCountry: "؟یونان", // New field
+                minPriceUSD: 10, // New field
+                maxPriceUSD: 100, // New field
+                origin: "جیجانگ (موسوم به مرکز ظروف چینی)",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 30,
+                localPrice: "215 CNY",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
+                materials: "کاشی بالک (فلدسپات و کائولین)",
                 usage: "دکور منزل، ظروف کاربردی، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
@@ -838,17 +758,17 @@
                 name: "عُود (عطر) عربی",
                 englishName: "Arabian Oud",
                 country: "عربستان",
-                secondCountry: "قطر", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                secondCountry: "؟ تونس یا امارات ؟", // New field
+                minPriceUSD: 10, // New field
+                maxPriceUSD: 100, // New field
+                origin: "-",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 50,
+                localPrice: "00 EUR",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
+                materials: "-",
                 usage: "دکور منزل، ظروف کاربردی، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
@@ -867,18 +787,18 @@
                 id: 13,
                 name: "قالی و گلیم آذربایجانی",
                 englishName: "Xalça",
-                country: "یونان",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                country: "جمهوری آذربایجان",
+                secondCountry: "؟ایران یا ترکیه؟", // New field
+                minPriceUSD: 100, // New field
+                maxPriceUSD: 5000, // New field
+                origin: "پشم و ابریشم",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 500,
+                localPrice: "850 AZN",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
+                materials: "نخجوان، باکو (منطقه قزلجا، شاراق)",
                 usage: "دکور منزل، ظروف کاربردی، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
@@ -897,18 +817,18 @@
                 id: 14,
                 name: "کلاه خزدار روسی",
                 englishName: "Ushanka",
-                country: "یونان",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                country: "روسیه",
+                secondCountry: "چین", // New field
+                minPriceUSD: 20, // New field
+                maxPriceUSD: 150, // New field
+                origin: "ایرکوتسک، اوفا",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 50,
+                localPrice: "3970 RUB",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
+                materials: "خز طبیعی یا مصنوعی",
                 usage: "دکور منزل، ظروف کاربردی، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
@@ -927,18 +847,18 @@
                 id: 15,
                 name: "ابریشم چینی",
                 englishName: "chinese silk",
-                country: "یونان",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                country: "چین",
+                secondCountry: "هند", // New field
+                minPriceUSD: 5, // New field
+                maxPriceUSD: 100, // New field
+                origin: "-",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 20,
+                localPrice: "144 CNY",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
+                materials: "ابریشم طبیعی",
                 usage: "دکور منزل، ظروف کاربردی، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
@@ -958,17 +878,17 @@
                 name: "چشم نظر",
                 englishName: "Nazar Boncuğu",
                 country: "ترکیه",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                secondCountry: "یونان", // New field
+                minPriceUSD: 1, // New field
+                maxPriceUSD: 20, // New field
+                origin: "استان آیدین (مرسین)",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 5,
+                localPrice: "203 TRY",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
+                materials: "شیشه؟",
                 usage: "دکور منزل، ظروف کاربردی، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
@@ -988,17 +908,17 @@
                 name: "شال کشمیری",
                 englishName: "Kashmiri Shawl",
                 country: "منطقه کشمیر (هند و پاکستان)",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                secondCountry: "هند و پاکستان", // New field
+                minPriceUSD: 50, // New field
+                maxPriceUSD: 500, // New field
+                origin: "کشمیر",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 150,
+                localPrice: "00 EUR",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
+                materials: "پشم کشمیر",
                 usage: "دکور منزل، ظروف کاربردی، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
@@ -1018,17 +938,17 @@
                 name: "کفش دست دوز",
                 englishName: "Khussa",
                 country: "پاکستان",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                secondCountry: "-", // New field
+                minPriceUSD: 5, // New field
+                maxPriceUSD: 15, // New field
+                origin: "مولتان",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 9,
+                localPrice: "2500 PKR",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
+                materials: "چرم طبیعی",
                 usage: "دکور منزل، ظروف کاربردی، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
@@ -1047,18 +967,18 @@
                 id: 19,
                 name: "دَله",
                 englishName: "Dallah",
-                country: "عربستان",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
+                country: "عربستان?",
+                secondCountry: "?امارات", // New field
+                minPriceUSD: 20, // New field
+                maxPriceUSD: 200, // New field
                 origin: "آتن، کرت",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 50,
+                localPrice: "00 EUR",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
+                materials: "مس یا برنج",
                 usage: "دکور منزل، ظروف کاربردی، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
@@ -1079,18 +999,18 @@
                 name: "ماکت اماکن دیدنی",
                 englishName: "Burj Khalifa Souvenir",
                 country: "امارات",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                secondCountry: "چین", // New field
+                minPriceUSD: 10, // New field
+                maxPriceUSD: 100, // New field
+                origin: "دبی",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 50,
+                localPrice: "185 AED",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
-                usage: "دکور منزل، ظروف کاربردی، کلکسیون",
+                materials: "آلومینیوم، پلاستیک",
+                usage: "دکور منزل، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
                 // Updated to imageUrls array
@@ -1109,17 +1029,17 @@
                 name: "ساری ابریشمی",
                 englishName: "Silk sarees",
                 country: "هند",
-                secondCountry: "قبرس", // New field
-                minPriceUSD: 40, // New field
-                maxPriceUSD: 70, // New field
-                origin: "آتن، کرت",
+                secondCountry: "بنگلادش", // New field
+                minPriceUSD: 20, // New field
+                maxPriceUSD: 500, // New field
+                origin: "بمبئی، جنوب هند (کارناتاکا)",
                 story: "سفالگری در یونان باستان هنری برجسته بود و داستان‌های اساطیری و زندگی روزمره را به تصویر می‌کشید. امروزه این سفال‌ها نمادی از تاریخ و هنر کهن یونان هستند.",
                 description: "ظروف سفالی دست‌ساز با طرح‌های الهام گرفته از هنر یونان باستان, شامل گلدان‌ها، کاسه‌ها و مجسمه‌های کوچک.",
-                avgPriceUSD: 55,
-                localPrice: "50 EUR",
+                avgPriceUSD: 100,
+                localPrice: "8758 INR",
                 category: ["صنایع دستی", "دکوری", "تاریخی", "هنری"],
                 audience: ["علاقه‌مندان به هنر", "علاقه‌مندان به تاریخ", "بزرگسالان", "کلکسیونرها"],
-                materials: "خاک رس، رنگ‌های معدنی",
+                materials: "ابریشم طبیعی",
                 usage: "دکور منزل، ظروف کاربردی، کلکسیون",
                 culturalValue: 9,
                 economicValue: 7,
@@ -1134,6 +1054,7 @@
                 annualProductionUnitsSecondCountry: 6000, // New field
                 annualSalesRevenueUSDSecondCountry: 330000 // New field
             },
+            // You can add more product objects here by copying and pasting the structure above.
         ].map(p => ({
             ...p,
             // New characteristics
@@ -1168,73 +1089,76 @@
             },
             {
                 id: 2,
-                name: "Global Crafts Market",
-                country: "آلمان",
-                website: "https://www.globalcrafts.de",
+                name: "Global Gifts Hub",
+                country: "بریتانیا",
+                website: "https://www.globalgiftshub.co.uk",
                 salesVolume: "800000.00",
                 areaSqM: "150",
                 length: 15,
                 width: 10,
-                productsSold: ["صنایع دستی آفریقایی", "جواهرات آسیایی", "سفال اروپایی"],
-                location: "برلین",
-                type: "retail",
-                storeAge: "10 سال",
-                specialNotes: "فروشگاه تخصصی صنایع دستی از سراسر جهان با تمرکز بر تجارت عادلانه.",
+                productsSold: ["اشیای دکوری", "تی‌شرت‌های محلی"],
+                location: "خیابان اصلی، مرکز شهر",
+                type: "chain", // New field
+                specialNotes: "دارای شعب متعدد در شهرهای بزرگ بریتانیا.", // New field
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/D2A0DB/FFFFFF?text=Store2+A",
-                    "https://placehold.co/400x300/D2A0DB/FFFFFF?text=Store2+B"
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store2+A",
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store2+B"
                 ]
             },
             {
                 id: 3,
-                name: "Souvenir World",
-                country: "فرانسه",
-                website: "https://www.souvenirworld.fr",
-                salesVolume: "1200000.00",
-                areaSqM: "250",
-                length: 25,
+                name: "Artisan Alley",
+                country: "روسیه",
+                website: "https://www.artisan-alley.ru",
+                salesVolume: "600000.00",
+                areaSqM: "120",
+                length: 12,
                 width: 10,
-                productsSold: ["ماکت‌های ایفل", "کلاه برت", "سوغات پاریس"],
-                location: "پاریس",
-                type: "chain",
-                specialNotes: "بزرگترین فروشگاه زنجیره‌ای سوغات در فرانسه با چندین شعبه در شهرهای توریستی.",
+                productsSold: ["عروسک‌های سنتی", "محصولات سنگی"],
+                location: "بازار بزرگ، منطقه تاریخی",
+                type: "retail", // New field
+                storeAge: "30 سال", // New field for retail
+                specialNotes: "تخصصی در فروش صنایع دستی اصیل روسی.", // New field
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/DBA0A0/FFFFFF?text=Store3+A",
-                    "https://placehold.co/400x300/DBA0A0/FFFFFF?text=Store3+B"
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store3+A",
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store3+B"
                 ]
             },
             {
                 id: 4,
-                name: "The Artisan's Corner",
-                country: "ایران",
-                website: "https://www.artisanscorner.ir",
-                salesVolume: "300000.00",
-                areaSqM: "80",
-                length: 8,
+                name: "Cultural Crafts Corner",
+                country: "ژاپن",
+                website: "https://www.culturalcraftscorner.jp",
+                salesVolume: "1200000.00",
+                areaSqM: "250",
+                length: 25,
                 width: 10,
-                productsSold: ["فرش دستباف", "سفال", "میناکاری"],
-                location: "اصفهان",
-                type: "retail",
-                storeAge: "5 سال",
-                specialNotes: "فروشگاه کوچک و معتبر با تمرکز بر صنایع دستی اصیل ایرانی.",
+                productsSold: ["منسوجات دست‌باف", "عروسک‌های سنتی"],
+                location: "نزدیک جاذبه توریستی",
+                type: "chain", // New field
+                specialNotes: "مجموعه‌ای گسترده از سوغات فرهنگی ژاپن در مکان‌های توریستی.", // New field
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0DBA0/FFFFFF?text=Store4+A",
-                    "https://placehold.co/400x300/A0DBA0/FFFFFF?text=Store4+B"
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store4+A",
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store4+B"
                 ]
             },
             {
                 id: 5,
-                name: "Japan Souvenirs Online",
-                country: "ژاپن",
-                website: "https://www.japansouvenirs.jp",
+                name: "Travel Treasures",
+                country: "مصر",
+                website: "https://www.traveltreasures.eg",
                 salesVolume: "950000.00",
                 areaSqM: "180",
                 length: 18,
                 width: 10,
-                productsSold: ["کیمونو", "عروسک کوکشی", "چای‌خوری ژاپنی"],
-                location: "آنلاین (دفتر مرکزی در توکیو)",
-                type: "chain",
-                specialNotes: "فروشگاه آنلاین بزرگ با تنوع بالای سوغات ژاپنی و ارسال سریع.",
+                productsSold: ["اشیای دکوری", "محصولات سنگی"],
+                location: "مرکز خرید مدرن",
+                type: "chain", // New field
+                specialNotes: "فروشگاه‌های بزرگ در فرودگاه‌ها و مراکز خرید اصلی.", // New field
+                // Updated to imageUrls array
                 imageUrls: [
                     "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store5+A",
                     "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store5+B"
@@ -1242,95 +1166,196 @@
             },
             {
                 id: 6,
-                name: "Swiss Gifts & More",
-                country: "سوئیس",
-                website: "https://www.swissgifts.ch",
-                salesVolume: "600000.00",
-                areaSqM: "100",
-                length: 10,
+                name: "Unique Keepsakes",
+                country: "ایران",
+                website: "https://www.uniquekeepsakes.ir",
+                salesVolume: "2000000.00",
+                areaSqM: "300",
+                length: 30,
                 width: 10,
-                productsSold: ["چاقوی سوئیسی", "شکلات سوئیسی", "ساعت کوکو"],
-                location: "زوریخ",
-                type: "retail",
-                storeAge: "8 سال",
-                specialNotes: "فروشگاه محبوب برای سوغات با کیفیت سوئیسی.",
+                productsSold: ["فرش و گلیم", "سرامیک‌های دست‌ساز"],
+                location: "دهکده صنایع دستی",
+                type: "retail", // New field
+                storeAge: "50 سال", // New field for retail
+                specialNotes: "یکی از قدیمی‌ترین و معتبرترین فروشگاه‌های فرش دستباف.", // New field
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/DBDBA0/FFFFFF?text=Store6+A",
-                    "https://placehold.co/400x300/DBDBA0/FFFFFF?text=Store6+B"
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store6+A",
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store6+B"
                 ]
             },
             {
                 id: 7,
-                name: "The Moroccan Bazaar",
-                country: "مراکش",
-                website: "https://www.moroccanbazaar.ma",
-                salesVolume: "400000.00",
-                areaSqM: "120",
-                length: 12,
+                name: "Wanderlust Wares",
+                country: "ایتالیا",
+                website: "https://www.wanderlustwares.it",
+                salesVolume: "1800000.00",
+                areaSqM: "220",
+                length: 22,
                 width: 10,
-                productsSold: ["فانوس مراکشی", "چرم", "ادویه‌جات"],
-                location: "مراکش",
-                type: "retail",
-                storeAge: "6 سال",
-                specialNotes: "بازار سنتی با مجموعه‌ای بی‌نظیر از صنایع دستی محلی.",
+                productsSold: ["اشیای دکوری", "سرامیک‌های دست‌ساز"],
+                location: "خیابان خرید لوکس",
+                type: "chain", // New field
+                specialNotes: "متخصص در سوغات لوکس و هنری ایتالیایی.", // New field
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0DBDB/FFFFFF?text=Store7+A",
-                    "https://placehold.co/400x300/A0DBDB/FFFFFF?text=Store7+B"
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store7+A",
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store7+B"
                 ]
             },
             {
                 id: 8,
-                name: "African Heritage Shop",
-                country: "آفریقای جنوبی",
-                website: "https://www.africanheritage.co.za",
-                salesVolume: "250000.00",
-                areaSqM: "70",
-                length: 7,
+                name: "Heritage Handiworks",
+                country: "آمریکا",
+                website: "https://www.heritagehandiworks.us",
+                salesVolume: "1100000.00",
+                areaSqM: "170",
+                length: 17,
                 width: 10,
-                productsSold: ["ماسک آفریقایی", "مجسمه‌های چوبی", "پارچه‌های سنتی"],
-                location: "کیپ‌تاون",
-                type: "retail",
-                storeAge: "4 سال",
-                specialNotes: "فروشگاه کوچک با تمرکز بر حفظ و نمایش هنرهای بومی آفریقا.",
+                productsSold: ["کلاه و پوشاک", "ابزار سنتی"],
+                location: "بلوار ساحلی",
+                type: "retail", // New field
+                storeAge: "25 سال", // New field for retail
+                specialNotes: "تمرکز بر صنایع دستی بومی آمریکا.", // New field
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/DBA0DB/FFFFFF?text=Store8+A",
-                    "https://placehold.co/400x300/DBA0DB/FFFFFF?text=Store8+B"
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store8+A",
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store8+B"
                 ]
             },
             {
                 id: 9,
-                name: "Dutch Delights",
-                country: "هلند",
-                website: "https://www.dutchdelights.nl",
-                salesVolume: "700000.00",
+                name: "The Local Touch",
+                country: "استرالیا",
+                website: "https://www.thelocaltouch.au",
+                salesVolume: "750000.00",
                 areaSqM: "130",
                 length: 13,
                 width: 10,
-                productsSold: ["کفش چوبی", "پنیر هلندی", "لاله"],
-                location: "آمستردام",
-                type: "chain",
-                specialNotes: "فروشگاه محبوب برای سوغات کلاسیک هلندی.",
+                productsSold: ["ابزار سنتی", "صنایع دستی چوبی"],
+                location: "منطقه هنری",
+                type: "retail", // New field
+                storeAge: "15 سال", // New field for retail
+                specialNotes: "مجموعه‌ای از بومرنگ‌ها و هنرهای بومی استرالیا.", // New field
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/A0A0DB/FFFFFF?text=Store9+A",
-                    "https://placehold.co/400x300/A0A0DB/FFFFFF?text=Store9+B"
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store9+A",
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store9+B"
                 ]
             },
             {
                 id: 10,
-                name: "Russian Souvenirs",
-                country: "روسیه",
-                website: "https://www.russiansouvenirs.ru",
-                salesVolume: "1100000.00",
-                areaSqM: "220",
-                length: 22,
+                name: "Passport Presents",
+                country: "مراکش",
+                website: "https://www.passportpresents.ma",
+                salesVolume: "900000.00",
+                areaSqM: "160",
+                length: 16,
                 width: 10,
-                productsSold: ["عروسک ماتروشکا", "سماور", "ظروف خولخلوما"],
-                location: "مسکو",
-                type: "chain",
-                specialNotes: "یکی از بزرگترین فروشگاه‌های سوغات در روسیه با مجموعه‌ای کامل از محصولات.",
+                productsSold: ["محصولات چرمی", "سفالینه‌های رنگی"],
+                location: "بازار بزرگ، منطقه تاریخی",
+                type: "chain", // New field
+                specialNotes: "فروشگاه‌های زنجیره‌ای با تمرکز بر سوغات آفریقای شمالی.", // New field
+                // Updated to imageUrls array
                 imageUrls: [
-                    "https://placehold.co/400x300/DBA0A0/FFFFFF?text=Store10+A",
-                    "https://placehold.co/400x300/DBA0A0/FFFFFF?text=Store10+B"
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store10+A",
+                    "https://placehold.co/400x300/A0D2DB/FFFFFF?text=Store10+B"
+                ]
+            },
+            // Additional retail stores
+            {
+                id: 11,
+                name: "The Little Souvenir Shop",
+                country: "فرانسه",
+                website: "#",
+                salesVolume: "100000.00", // Placeholder, as it's retail
+                areaSqM: "50",
+                length: 5,
+                width: 10,
+                productsSold: ["ماکت برج ایفل", "جاکلیدی", "کارت پستال"],
+                location: "کوچه پس‌کوچه‌های مون‌مارتر، پاریس",
+                type: "retail",
+                storeAge: "10 سال",
+                specialNotes: "فروشگاهی کوچک و دنج با تمرکز بر سوغات دست‌ساز محلی.",
+                imageUrls: [
+                    "https://placehold.co/400x300/ADD8E6/000000?text=Retail+Shop+1+A",
+                    "https://placehold.co/400x300/ADD8E6/000000?text=Retail+Shop+1+B"
+                ]
+            },
+            {
+                id: 12,
+                name: "Old Town Crafts",
+                country: "آلمان",
+                website: "#",
+                salesVolume: "120000.00", // Placeholder, as it's retail
+                areaSqM: "70",
+                length: 7,
+                width: 10,
+                productsSold: ["ماگ آبجو", "چوب‌تراشی", "عروسک‌های سنتی"],
+                location: "مرکز شهر قدیمی، مونیخ",
+                type: "retail",
+                storeAge: "20 سال",
+                specialNotes: "متخصص در صنایع دستی چوبی و سوغات سنتی باواریا.",
+                imageUrls: [
+                    "https://placehold.co/400x300/ADD8E6/000000?text=Retail+Shop+2+A",
+                    "https://placehold.co/400x300/ADD8E6/000000?text=Retail+Shop+2+B"
+                ]
+            },
+            {
+                id: 13,
+                name: "Mediterranean Souvenirs",
+                country: "یونان",
+                website: "#",
+                salesVolume: "90000.00", // Placeholder, as it's retail
+                areaSqM: "60",
+                length: 6,
+                width: 10,
+                productsSold: ["سفال یونانی", "مجسمه‌های کوچک", "روغن زیتون"],
+                location: "نزدیک آکروپولیس، آتن",
+                type: "retail",
+                storeAge: "12 سال",
+                specialNotes: "ارائه دهنده سوغات اصیل یونانی با تمرکز بر سفالگری.",
+                imageUrls: [
+                    "https://placehold.co/400x300/ADD8E6/000000?text=Retail+Shop+3+A",
+                    "https://placehold.co/400x300/ADD8E6/000000?text=Retail+Shop+3+B"
+                ]
+            },
+            {
+                id: 14,
+                name: "Silk Road Treasures",
+                country: "ترکیه",
+                website: "#",
+                salesVolume: "180000.00", // Placeholder, as it's retail
+                areaSqM: "90",
+                length: 9,
+                width: 10,
+                productsSold: ["ظروف مسی", "قالیچه‌های کوچک", "لامپ‌های موزاییک"],
+                location: "بازار بزرگ، استانبول",
+                type: "retail",
+                storeAge: "40 سال",
+                specialNotes: "فروشگاه خانوادگی با مجموعه‌ای بی‌نظیر از صنایع دستی ترکی.",
+                imageUrls: [
+                    "https://placehold.co/400x300/ADD8E6/000000?text=Retail+Shop+4+A",
+                    "https://placehold.co/400x300/ADD8E6/000000?text=Retail+Shop+4+B"
+                ]
+            },
+            {
+                id: 15,
+                name: "Desert Gems",
+                country: "مصر",
+                website: "#",
+                salesVolume: "70000.00", // Placeholder, as it's retail
+                areaSqM: "45",
+                length: 4.5,
+                width: 10,
+                productsSold: ["پاپیروس", "مجسمه‌های فرعون", "جواهرات مصری"],
+                location: "نزدیک اهرام جیزه، قاهره",
+                type: "retail",
+                storeAge: "18 سال",
+                specialNotes: "سوغات باستانی و مدرن مصر را در فضایی دلنشین ارائه می‌دهد.",
+                imageUrls: [
+                    "https://placehold.co/400x300/ADD8E6/000000?text=Retail+Shop+5+A",
+                    "https://placehold.co/400x300/ADD8E6/000000?text=Retail+Shop+5+B"
                 ]
             }
         ];
@@ -1340,12 +1365,12 @@
         const baseCountriesInfo = [
             {
                 name: "فرانسه",
-                tourists: "89 میلیون نفر",
-                avgSpending: 120, 
-                souvenirSpendingPercentage: 15, 
-                transportationCost: 40, 
-                accommodationCost: 50, 
-                foodCost: 30,
+                tourists: "89.4 میلیون نفر",
+                avgSpending: 218.5, 
+                souvenirCost: 15, 
+                transportationCost: 633, 
+                accommodationCost: 73, 
+                foodCost: 58,
                 annualTourismRevenue: "60 میلیارد دلار", // Added annual tourism revenue
                 perCapitaIncome: "45,000 دلار", // Added per capita income
                 popularProducts: ["ماکت برج ایفل", "کلاه برت", "عطر"],
@@ -1353,12 +1378,12 @@
             },
             {
                 name: "اسپانیا",
-                tourists: "83 میلیون نفر",
-                avgSpending: 95,
-                souvenirSpendingPercentage: 12,
-                transportationCost: 30,
-                accommodationCost: 40,
-                foodCost: 25,
+                tourists: "83.7 میلیون نفر",
+                avgSpending: 228,
+                souvenirCost: 31,
+                transportationCost: 688.5,
+                accommodationCost: 67.5,
+                foodCost: 55,
                 annualTourismRevenue: "55 میلیارد دلار", // Added annual tourism revenue
                 perCapitaIncome: "30,000 دلار", // Added per capita income
                 popularProducts: ["فن دستی", "صنایع چرمی", "فلامنکو دال"],
@@ -1366,12 +1391,12 @@
             },
             {
                 name: "آمریکا",
-                tourists: "79 میلیون نفر",
-                avgSpending: 150,
-                souvenirSpendingPercentage: 18,
-                transportationCost: 60,
-                accommodationCost: 70,
-                foodCost: 40,
+                tourists: "79.3 میلیون نفر",
+                avgSpending: 269.5,
+                souvenirCost: 22.5,
+                transportationCost: 641.5,
+                accommodationCost: 98.5,
+                foodCost: 73,
                 annualTourismRevenue: "200 میلیارد دلار", // Added annual tourism revenue
                 perCapitaIncome: "70,000 دلار", // Added per capita income
                 popularProducts: ["کلاه کابوی", "مجسمه آزادی", "تی‌شرت‌های محلی"],
@@ -1379,12 +1404,12 @@
             },
             {
                 name: "چین",
-                tourists: "65 میلیون نفر",
-                avgSpending: 110,
-                souvenirSpendingPercentage: 14,
-                transportationCost: 35,
-                accommodationCost: 45,
-                foodCost: 30,
+                tourists: "65.7 میلیون نفر",
+                avgSpending: 211,
+                souvenirCost: 12.5,
+                transportationCost: 784.5,
+                accommodationCost: 59,
+                foodCost: 48.5,
                 annualTourismRevenue: "120 میلیارد دلار", // Added annual tourism revenue
                 perCapitaIncome: "12,000 دلار", // Added per capita income
                 popularProducts: ["ظروف چینی آبی و سفید", "مجسمه اژدها", "پارچه‌های ابریشمی"],
@@ -1392,12 +1417,12 @@
             },
             {
                 name: "ایتالیا",
-                tourists: "64 میلیون نفر",
-                avgSpending: 135,
-                souvenirSpendingPercentage: 20,
-                transportationCost: 45,
-                accommodationCost: 55,
-                foodCost: 35,
+                tourists: "64.5 میلیون نفر",
+                avgSpending: 196.5,
+                souvenirCost: 17,
+                transportationCost: 178.5,
+                accommodationCost: 89,
+                foodCost: 83,
                 annualTourismRevenue: "70 میلیارد دلار", // Added annual tourism revenue
                 perCapitaIncome: "35,000 دلار", // Added per capita income
                 popularProducts: ["ماسک ونیزی", "اشیاء شیشه‌ای مورانو", "سفال مایولیکا"],
@@ -1405,12 +1430,12 @@
             },
             {
                 name: "ترکیه",
-                tourists: "51 میلیون نفر",
-                avgSpending: 85,
-                souvenirSpendingPercentage: 17,
-                transportationCost: 25,
-                accommodationCost: 35,
-                foodCost: 20,
+                tourists: "51.2 میلیون نفر",
+                avgSpending: 176,
+                souvenirCost: 25.5,
+                transportationCost: 567,
+                accommodationCost: 49.5,
+                foodCost: 45,
                 annualTourismRevenue: "35 میلیارد دلار", // Added annual tourism revenue
                 perCapitaIncome: "10,000 دلار", // Added per capita income
                 popularProducts: ["ظروف مسی", "کلاه فز", "قالیچه ترکی"],
@@ -1419,11 +1444,11 @@
             {
                 name: "مکزیک",
                 tourists: "45 میلیون نفر",
-                avgSpending: 70,
-                souvenirSpendingPercentage: 10,
-                transportationCost: 20,
-                accommodationCost: 30,
-                foodCost: 15,
+                avgSpending: 190.5,
+                souvenirCost: 53,
+                transportationCost: 582.5,
+                accommodationCost: 62,
+                foodCost: 49,
                 annualTourismRevenue: "25 میلیارد دلار", // Added annual tourism revenue
                 perCapitaIncome: "11,000 دلار", // Added per capita income
                 popularProducts: ["کلاه سومبررو", "سفال مکزیکی", "نقره تاکسکو"],
@@ -1431,12 +1456,12 @@
             },
             {
                 name: "تایلند",
-                tourists: "39 میلیون نفر",
-                avgSpending: 75,
-                souvenirSpendingPercentage: 16,
-                transportationCost: 20,
-                accommodationCost: 30,
-                foodCost: 25,
+                tourists: "39.8 میلیون نفر",
+                avgSpending: 91.5,
+                souvenirCost: 14,
+                transportationCost: 176.5,
+                accommodationCost: 31.5,
+                foodCost: 32.5,
                 annualTourismRevenue: "40 میلیارد دلار", // Added annual tourism revenue
                 perCapitaIncome: "7,000 دلار", // Added per capita income
                 popularProducts: ["مجسمه بودا", "ابریشم تایلندی", "نقره"],
@@ -1444,12 +1469,12 @@
             },
             {
                 name: "آلمان",
-                tourists: "39 میلیون نفر",
-                avgSpending: 90,
-                souvenirSpendingPercentage: 11,
-                transportationCost: 30,
-                accommodationCost: 40,
-                foodCost: 20,
+                tourists: "39.6 میلیون نفر",
+                avgSpending: 66,
+                souvenirCost: 230,
+                transportationCost: 746.5,
+                accommodationCost: 79,
+                foodCost: 58,
                 annualTourismRevenue: "50 میلیارد دلار", // Added annual tourism revenue
                 perCapitaIncome: "50,000 دلار", // Added per capita income
                 popularProducts: ["ساعت کوکو", "چوب‌تراشی", "ماگ آبجو"],
@@ -1457,12 +1482,12 @@
             },
             {
                 name: "بریتانیا",
-                tourists: "38 میلیون نفر",
-                avgSpending: 100,
-                souvenirSpendingPercentage: 13,
-                transportationCost: 35,
-                accommodationCost: 45,
-                foodCost: 25,
+                tourists: "39.4 میلیون نفر",
+                avgSpending: 335,
+                souvenirCost: 70.5,
+                transportationCost: 722.5,
+                accommodationCost: 95.5,
+                foodCost: 103,
                 annualTourismRevenue: "45 میلیارد دلار", // Added annual tourism revenue
                 perCapitaIncome: "42,000 دلار", // Added per capita income
                 popularProducts: ["ماکت اتوبوس لندن", "کلاه سلطنتی", "چای‌خوری"],
@@ -1472,7 +1497,7 @@
                 name: "روسیه",
                 tourists: "38 میلیون نفر",
                 avgSpending: 100,
-                souvenirSpendingPercentage: 13,
+                souvenirCost: 13,
                 transportationCost: 35,
                 accommodationCost: 45,
                 foodCost: 25,
@@ -1485,7 +1510,7 @@
                 name: "امارات",
                 tourists: "38 میلیون نفر",
                 avgSpending: 100,
-                souvenirSpendingPercentage: 13,
+                souvenirCost: 13,
                 transportationCost: 35,
                 accommodationCost: 45,
                 foodCost: 25,
@@ -1498,7 +1523,7 @@
                 name: "آذربایجان",
                 tourists: "38 میلیون نفر",
                 avgSpending: 100,
-                souvenirSpendingPercentage: 13,
+                souvenirCost: 13,
                 transportationCost: 35,
                 accommodationCost: 45,
                 foodCost: 25,
@@ -1511,7 +1536,7 @@
                 name: "عربستان",
                 tourists: "38 میلیون نفر",
                 avgSpending: 100,
-                souvenirSpendingPercentage: 13,
+                souvenirCost: 13,
                 transportationCost: 35,
                 accommodationCost: 45,
                 foodCost: 25,
@@ -1524,7 +1549,7 @@
                 name: "هند",
                 tourists: "38 میلیون نفر",
                 avgSpending: 100,
-                souvenirSpendingPercentage: 13,
+                souvenirCost: 13,
                 transportationCost: 35,
                 accommodationCost: 45,
                 foodCost: 25,
@@ -1537,7 +1562,7 @@
                 name: "پاکستان",
                 tourists: "38 میلیون نفر",
                 avgSpending: 100,
-                souvenirSpendingPercentage: 13,
+                souvenirCost: 13,
                 transportationCost: 35,
                 accommodationCost: 45,
                 foodCost: 25,
@@ -1550,7 +1575,7 @@
                 name: "قطر",
                 tourists: "38 میلیون نفر",
                 avgSpending: 100,
-                souvenirSpendingPercentage: 13,
+                souvenirCost: 13,
                 transportationCost: 35,
                 accommodationCost: 45,
                 foodCost: 25,
@@ -1734,7 +1759,9 @@
                 demographics: { retired: 15, couples: 30, solo: 25, youth: 15, family: 15 },
                 image: "Flags/Qatar.png"
             },
-];
+            // You can add more country tourist analysis objects here by copying and pasting the structure above.
+        ];
+
         // Global Tourist Statistics Calculation
         const globalTouristStats = {
             topDestinations: {},
@@ -1788,13 +1815,9 @@
         document.addEventListener('DOMContentLoaded', () => {
             const countryFilter = document.getElementById('country-filter');
             const categoryFilter = document.getElementById('category-filter');
-            // Price Range Filter elements
-            const minPriceFilter = document.getElementById('min-price-filter');
-            const maxPriceFilter = document.getElementById('max-price-filter');
+            const priceFilter = document.getElementById('price-filter');
             const priceValue = document.getElementById('price-value');
-            // End Price Range Filter elements
             const audienceFilter = document.getElementById('audience-filter');
-            const sortByPrice = document.getElementById('sort-by-price'); // New sort element
             const productGrid = document.getElementById('product-grid');
             const productModal = document.getElementById('product-modal');
             const productModalContent = document.getElementById('modal-content');
@@ -1803,7 +1826,6 @@
             const storeList = document.getElementById('store-list');
             const storeSearch = document.getElementById('store-search');
             const storeTypeFilter = document.getElementById('store-type-filter'); // New filter for store type
-            const storeCountryFilter = document.getElementById('store-country-filter'); // New filter for store country
             const storeDetailModal = document.getElementById('store-detail-modal');
             const storeModalContent = document.getElementById('store-modal-content');
             const closeStoreModalBtn = document.getElementById('close-store-modal');
@@ -1918,15 +1940,6 @@
                 }
             });
 
-            // Populate store country filter
-            let allStoreCountries = ['all'];
-            storesData.forEach(store => {
-                if (!allStoreCountries.includes(store.country)) {
-                    allStoreCountries.push(store.country);
-                }
-            });
-            storeCountryFilter.innerHTML = allStoreCountries.map(c => `<option value="${c}">${c === 'all' ? 'همه کشورها' : c}</option>`).join('');
-
 
             allCountries.sort((a,b) => a === 'همه کشورها' ? -1 : b === 'همه کشورها' ? 1 : a.localeCompare(b,'fa'));
             allCategories.sort((a,b) => a === 'همه دسته‌ها' ? -1 : b === 'همه دسته‌ها' ? 1 : a.localeCompare(b,'fa'));
@@ -1972,43 +1985,26 @@
             function filterAndRender() {
                 const country = countryFilter.value;
                 const category = categoryFilter.value;
-                const minPrice = parseInt(minPriceFilter.value); // Get min price
-                const maxPrice = parseInt(maxPriceFilter.value); // Get max price
+                const price = parseInt(priceFilter.value);
                 const audience = audienceFilter.value;
-                const sortOrder = sortByPrice.value; // Get sort order
 
-                let filtered = products.filter(p => {
+                const filtered = products.filter(p => {
                     const countryMatch = (country === 'همه کشورها' || p.country === country || p.secondCountry === country); // Check second country too
                     const categoryMatch = (category === 'همه دسته‌ها' || p.category.includes(category));
-                    const priceMatch = (p.avgPriceUSD >= minPrice && p.avgPriceUSD <= maxPrice); // Use min and max
+                    const priceMatch = (p.avgPriceUSD <= price);
                     const audienceMatch = (audience === 'همه' || p.audience.includes(audience));
                     return countryMatch && categoryMatch && priceMatch && audienceMatch;
                 });
-
-                // Apply sorting
-                if (sortOrder === 'asc') {
-                    filtered.sort((a, b) => a.avgPriceUSD - b.avgPriceUSD);
-                } else if (sortOrder === 'desc') {
-                    filtered.sort((a, b) => b.avgPriceUSD - a.avgPriceUSD);
-                }
-
                 renderProducts(filtered);
             }
             
-            // Update price display and re-filter on input change
-            minPriceFilter.addEventListener('input', () => {
-                priceValue.textContent = `${minPriceFilter.value}$-${maxPriceFilter.value}$`;
-                filterAndRender();
+            priceFilter.addEventListener('input', (e) => {
+                priceValue.textContent = `${e.target.value}$`;
             });
-            maxPriceFilter.addEventListener('input', () => {
-                priceValue.textContent = `${minPriceFilter.value}$-${maxPriceFilter.value}$`;
-                filterAndRender();
-            });
-
+            priceFilter.addEventListener('change', filterAndRender);
             countryFilter.addEventListener('change', filterAndRender);
             categoryFilter.addEventListener('change', filterAndRender);
             audienceFilter.addEventListener('change', filterAndRender);
-            sortByPrice.addEventListener('change', filterAndRender); // Listen for sort changes
 
             productGrid.addEventListener('click', (e) => {
                 const card = e.target.closest('[data-id]');
@@ -2103,7 +2099,7 @@
                 }
             });
 
-            filterAndRender(); // Initial render for products
+            renderProducts(products);
 
             const navButtons = document.querySelectorAll('nav button');
             const contentSections = document.querySelectorAll('main > .content-section'); // Select top-level sections
@@ -2123,14 +2119,13 @@
                                 productGrid.classList.remove('hidden');
                                 nestedRankingSection.classList.add('hidden');
                                 nestedAnalysisSection.classList.add('hidden'); 
-                                filterAndRender(); // Re-render products with current filters
                             } else if (targetId === 'countries') {
                                 nestedAnalysisSection.classList.add('hidden'); // Hide analysis by default
                                 countryGrid.classList.remove('hidden'); // Ensure country grid is visible
-                                filterAndRenderCountries(); // Re-render countries with current filters
+                                renderCountries(); // Re-render countries
                             } else if (targetId === 'tourist-analysis') { // New tab logic
                                 renderGlobalTouristStats();
-                                filterAndRenderTouristAnalysisCards(); // Re-render tourist analysis cards with filters
+                                renderTouristAnalysisCards(touristAnalysisData);
                             } else if (targetId === 'stores') { // Store tab logic
                                 filterAndRenderStores(); // Re-render stores with current filters
                             }
@@ -2165,7 +2160,7 @@
 
                 const spendingLabels = consolidatedCountriesInfo.map(c => c.name);
                 const totalSpending = consolidatedCountriesInfo.map(c => c.avgSpending);
-                const souvenirSpending = consolidatedCountriesInfo.map(c => (c.avgSpending * c.souvenirSpendingPercentage / 100).toFixed(2));
+                const souvenirSpending = consolidatedCountriesInfo.map(c => c.souvenirCost);
                 const transportationSpending = consolidatedCountriesInfo.map(c => c.transportationCost); 
                 const accommodationSpending = consolidatedCountriesInfo.map(c => c.accommodationCost);   
                 const foodSpending = consolidatedCountriesInfo.map(c => c.foodCost);                   
@@ -2188,7 +2183,7 @@
                             borderWidth: 1
                         },
                         {
-                            label: 'هزینه حمل و نقل (دلار)', 
+                            label: 'متوسط هزینه پرواز (دلار)', 
                             data: transportationSpending,
                             backgroundColor: 'rgba(75, 192, 192, 0.7)',
                             borderColor: 'rgba(75, 192, 192, 1)',
@@ -2202,7 +2197,7 @@
                             borderWidth: 1
                         },
                         {
-                            label: 'هزینه خوراک (دلار)', 
+                            label: 'هزینه خوراک و بازدید (دلار)', 
                             data: foodSpending,
                             backgroundColor: 'rgba(255, 99, 132, 0.7)',
                             borderColor: 'rgba(255, 99, 132, 1)',
@@ -2282,22 +2277,19 @@
             function filterAndRenderStores() {
                 const searchTerm = storeSearch.value.toLowerCase();
                 const storeType = storeTypeFilter.value;
-                const storeCountry = storeCountryFilter.value; // Get store country filter
 
                 const filtered = storesData.filter(store => {
                     const searchMatch = store.name.toLowerCase().includes(searchTerm) || 
                                         store.country.toLowerCase().includes(searchTerm) ||
                                         store.productsSold.some(p => p.toLowerCase().includes(searchTerm));
                     const typeMatch = (storeType === 'all' || store.type === storeType);
-                    const countryMatch = (storeCountry === 'all' || store.country === storeCountry); // New country filter logic
-                    return searchMatch && typeMatch && countryMatch; // Combine all filters
+                    return searchMatch && typeMatch;
                 });
                 renderStores(filtered);
             }
 
             storeSearch.addEventListener('input', filterAndRenderStores);
-            storeTypeFilter.addEventListener('change', filterAndRenderStores);
-            storeCountryFilter.addEventListener('change', filterAndRenderStores); // New event listener for store country
+            storeTypeFilter.addEventListener('change', filterAndRenderStores); // New event listener
             filterAndRenderStores(); // Initial render for stores
 
 
@@ -2388,34 +2380,21 @@
                 }
             });
             
-            // Country filter elements
-            const touristCountFilterMin = document.getElementById('tourist-count-filter-min');
-            const touristCountFilterMax = document.getElementById('tourist-count-filter-max');
-            const avgSpendingFilterMin = document.getElementById('avg-spending-filter-min');
-            const avgSpendingFilterMax = document.getElementById('avg-spending-filter-max');
-            const annualRevenueFilterMin = document.getElementById('annual-revenue-filter-min');
-            const annualRevenueFilterMax = document.getElementById('annual-revenue-filter-max');
-
             // New function to render countries (uses consolidatedCountriesInfo)
-            function renderCountries(filteredCountries) {
+            function renderCountries() {
                 countryGrid.innerHTML = '';
                 // Hide analysis section if it's currently visible when rendering countries
                 nestedAnalysisSection.classList.add('hidden');
                 countryGrid.classList.remove('hidden'); // Ensure country grid is visible
 
-                if (filteredCountries.length === 0) {
-                    countryGrid.innerHTML = `<p class="text-gray-500 col-span-full text-center">هیچ کشوری با این فیلترها یافت نشد.</p>`;
-                    return;
-                }
-
-                filteredCountries.forEach(country => {
+                consolidatedCountriesInfo.forEach(country => {
                     const countryCard = document.createElement('div');
                     countryCard.className = "bg-white rounded-lg shadow-lg p-6 cursor-pointer transform hover:-translate-y-1 transition-transform duration-300"; // Added cursor-pointer
                     countryCard.dataset.countryName = country.name; // Add data-country-name for click handling
                     countryCard.innerHTML = `
                         <h3 class="text-xl font-bold text-[#34658F] mb-3">${country.name}</h3>
                         <p class="text-gray-700 mb-2"><strong>تعداد گردشگر:</strong> ${country.tourists}</p>
-                        <p class="text-gray-700 mb-2"><strong>متوسط سبد خرید:</strong> ${country.avgSpending}$</p>
+                        <p class="text-gray-700 mb-2"><strong>متوسط هزینه سفر به مدت یک روز:</strong> ${country.avgSpending}$</p>
                         <p class="text-gray-700 mb-2"><strong>درآمد سالانه از گردشگری:</strong> ${country.annualTourismRevenue}</p>
                         <p class="text-gray-700 mb-2"><strong>درآمد سرانه:</strong> ${country.perCapitaIncome}</p> <!-- Added per capita income -->
                         <p class="text-gray-700 mb-2"><strong>محصولات محبوب:</strong> ${country.popularProducts.join(', ')}</p>
@@ -2424,33 +2403,7 @@
                     countryGrid.appendChild(countryCard);
                 });
             }
-
-            function filterAndRenderCountries() {
-                const minTourists = parseFloat(touristCountFilterMin.value);
-                const maxTourists = parseFloat(touristCountFilterMax.value);
-                const minAvgSpending = parseFloat(avgSpendingFilterMin.value);
-                const maxAvgSpending = parseFloat(avgSpendingFilterMax.value);
-                const minAnnualRevenue = parseFloat(annualRevenueFilterMin.value);
-                const maxAnnualRevenue = parseFloat(annualRevenueFilterMax.value);
-
-                const filtered = consolidatedCountriesInfo.filter(country => {
-                    const touristMatch = country.touristsNumeric >= minTourists && country.touristsNumeric <= maxTourists;
-                    const avgSpendingMatch = country.avgSpending >= minAvgSpending && country.avgSpending <= maxAvgSpending;
-                    const annualRevenueMatch = country.annualTourismRevenueNumeric >= minAnnualRevenue && country.annualTourismRevenueNumeric <= maxAnnualRevenue;
-                    return touristMatch && avgSpendingMatch && annualRevenueMatch;
-                });
-                renderCountries(filtered);
-            }
-
-            // Add event listeners for country filters
-            touristCountFilterMin.addEventListener('input', filterAndRenderCountries);
-            touristCountFilterMax.addEventListener('input', filterAndRenderCountries);
-            avgSpendingFilterMin.addEventListener('input', filterAndRenderCountries);
-            avgSpendingFilterMax.addEventListener('input', filterAndRenderCountries);
-            annualRevenueFilterMin.addEventListener('input', filterAndRenderCountries);
-            annualRevenueFilterMax.addEventListener('input', filterAndRenderCountries);
-
-            filterAndRenderCountries(); // Call this function on load for countries tab
+            renderCountries(); // Call this function on load
 
             // Event listener for country grid clicks (to open country detail modal)
             countryGrid.addEventListener('click', (e) => {
@@ -2482,11 +2435,11 @@
                     <div class="bg-gray-50 p-4 rounded-lg mt-4">
                         <h4 class="font-bold text-lg mb-3 text-[#4F80B9]">تحلیل هزینه‌ها (سرانه)</h4>
                         <ul class="space-y-3 text-gray-800">
-                            <li class="flex justify-between"><strong>متوسط سبد خرید:</strong> <span>${country.avgSpending}$</span></li>
-                            <li class="flex justify-between"><strong>درصد هزینه سوغاتی:</strong> <span>${country.souvenirSpendingPercentage}%</span></li>
-                            <li class="flex justify-between"><strong>هزینه حمل و نقل:</strong> <span>${country.transportationCost}$</span></li>
+                            <li class="flex justify-between"><strong>متوسط هزینه سفر به مدت یک روز:</strong> <span>${country.avgSpending}$</span></li>
+                            <li class="flex justify-between"><strong>درصد هزینه سوغاتی:</strong> <span>${country.souvenirCost}$</span></li>
+                            <li class="flex justify-between"><strong>متوسط هزینه پرواز:</strong> <span>${country.transportationCost}$</span></li>
                             <li class="flex justify-between"><strong>هزینه اسکان:</strong> <span>${country.accommodationCost}$</span></li>
-                            <li class="flex justify-between"><strong>هزینه خوراک:</strong> <span>${country.foodCost}$</span></li>
+                            <li class="flex justify-between"><strong>متوسط هزینه خوراک و بازدید:</strong> <span>${country.foodCost}$</span></li>
                         </ul>
                     </div>
                 `;
@@ -2686,38 +2639,6 @@
             applyRankingFilters();
 
             // --- Tourist Analysis Tab Functions ---
-            const travelPurposeFilter = document.getElementById('travel-purpose-filter');
-            const ageGroupFilter = document.getElementById('age-group-filter');
-            const economicLevelFilter = document.getElementById('economic-level-filter');
-            const demographicFilter = document.getElementById('demographic-filter');
-
-            // Populate tourist analysis filters
-            let allTravelPurposes = ['all'];
-            let allAgeGroups = ['all'];
-            let allEconomicLevels = ['all'];
-            let allDemographics = ['all'];
-
-            touristAnalysisData.forEach(data => {
-                Object.keys(data.travelPurposes).forEach(purpose => {
-                    if (!allTravelPurposes.includes(purpose)) allTravelPurposes.push(purpose);
-                });
-                Object.keys(data.ageGroups).forEach(age => {
-                    if (!allAgeGroups.includes(age)) allAgeGroups.push(age);
-                });
-                Object.keys(data.economicLevels).forEach(level => {
-                    if (!allEconomicLevels.includes(level)) allEconomicLevels.push(level);
-                });
-                Object.keys(data.demographics).forEach(demo => {
-                    if (!allDemographics.includes(demo)) allDemographics.push(demo);
-                });
-            });
-
-            travelPurposeFilter.innerHTML = allTravelPurposes.map(p => `<option value="${p}">${p === 'all' ? 'همه' : p}</option>`).join('');
-            ageGroupFilter.innerHTML = allAgeGroups.map(a => `<option value="${a}">${a === 'all' ? 'همه' : a}</option>`).join('');
-            economicLevelFilter.innerHTML = allEconomicLevels.map(e => `<option value="${e}">${e === 'all' ? 'همه' : e}</option>`).join('');
-            demographicFilter.innerHTML = allDemographics.map(d => `<option value="${d}">${d === 'all' ? 'همه' : d}</option>`).join('');
-
-
             function renderGlobalTouristStats() {
                 document.getElementById('global-top-destinations').textContent = globalTouristStats.topDestinations;
                 document.getElementById('global-travel-purposes').textContent = Object.entries(globalTouristStats.travelPurposes).map(([key, value]) => `${key}: ${value}%`).join(', ');
@@ -2726,27 +2647,10 @@
                 document.getElementById('global-demographics').textContent = Object.entries(globalTouristStats.demographics).map(([key, value]) => `${key}: ${value}%`).join(', ');
             }
 
-            function filterAndRenderTouristAnalysisCards() {
-                const selectedPurpose = travelPurposeFilter.value;
-                const selectedAgeGroup = ageGroupFilter.value;
-                const selectedEconomicLevel = economicLevelFilter.value;
-                const selectedDemographic = demographicFilter.value;
-
-                let filteredData = touristAnalysisData.filter(countryData => {
-                    const purposeMatch = selectedPurpose === 'all' || (countryData.travelPurposes[selectedPurpose] && countryData.travelPurposes[selectedPurpose] > 0);
-                    const ageMatch = selectedAgeGroup === 'all' || (countryData.ageGroups[selectedAgeGroup] && countryData.ageGroups[selectedAgeGroup] > 0);
-                    const economicMatch = selectedEconomicLevel === 'all' || (countryData.economicLevels[selectedEconomicLevel] && countryData.economicLevels[selectedEconomicLevel] > 0);
-                    const demographicMatch = selectedDemographic === 'all' || (countryData.demographics[selectedDemographic] && countryData.demographics[selectedDemographic] > 0);
-                    
-                    return purposeMatch && ageMatch && economicMatch && demographicMatch;
-                });
-                renderTouristAnalysisCards(filteredData);
-            }
-
             function renderTouristAnalysisCards(data) {
                 touristAnalysisGrid.innerHTML = '';
                 if(data.length === 0){
-                    touristAnalysisGrid.innerHTML = `<p class="text-gray-500 col-span-full text-center">هیچ داده‌ای برای تحلیل گردشگران با این فیلترها یافت نشد.</p>`;
+                    touristAnalysisGrid.innerHTML = `<p class="text-gray-500 col-span-full text-center">هیچ داده‌ای برای تحلیل گردشگران یافت نشد.</p>`;
                     return;
                 }
                 data.forEach(countryData => {
@@ -2764,13 +2668,6 @@
                     touristAnalysisGrid.appendChild(card);
                 });
             }
-
-            // Add event listeners for tourist analysis filters
-            travelPurposeFilter.addEventListener('change', filterAndRenderTouristAnalysisCards);
-            ageGroupFilter.addEventListener('change', filterAndRenderTouristAnalysisCards);
-            economicLevelFilter.addEventListener('change', filterAndRenderTouristAnalysisCards);
-            demographicFilter.addEventListener('change', filterAndRenderTouristAnalysisCards);
-
 
             touristAnalysisGrid.addEventListener('click', (e) => {
                 const card = e.target.closest('[data-id]');
